@@ -1,0 +1,169 @@
+body {
+    background-color: black;
+    /* background-color: #23252C; */
+    font-family: 'Inter', sans-serif;
+    /* background-image: linear-gradient(to bottom right, #161619, #65666B, #918E9B, #DCDCDC); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.sidecard {
+    width: 345px;
+    height: 1000px;
+    color: white;
+
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 50px;
+    /* background-color: #23252c; */
+    border-radius: 25px;
+    position: relative;
+
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, .15);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-Left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+
+    justify-self: flex-start;
+    
+}
+
+.sidecard--image {
+    width: 345px;
+    height: 402px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.sidecard--name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name {
+    margin: 3px;
+}
+
+h3 {
+    color: #f3bf99
+}
+
+.sidecard--buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.sidecard--button-email {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: black;
+    width: 125px;
+    height: 31px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.sidecard--button-email > svg, .sidecard--button-github > svg {
+    margin-right: 5px;
+}
+
+.sidecard--button-github {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: white;
+    width: 125px;
+    height: 31px;
+    background-color: #297FE5;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sidecard--about, .sidecard--interests {
+    margin-top: 0;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.sidecard--about > h1 {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.sidecard--about > p {
+    text-align: left;
+    margin-top: 0;
+}
+
+.sidecard--interests > h1 {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.sidecard--interests > p {
+    text-align: left;
+    margin-top: 0;
+}
+
+
+
+
+.sidecard-footer-social-icons {
+    width: 345px;
+    position: absolute;
+    bottom: 0;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: white;
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255, 255, 255, 0.7), 
+        rgba(255, 255, 255, 0.3)
+    );
+    
+}
+
+
+.card-container {
+    margin-top: 50px; /* Same as Sidecard */
+    width: 1000px;
+    height: 1000px;
+
+    /* Glass Effect */
+    background-color: white;
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255, 255, 255, 0.7), 
+        rgba(255, 255, 255, 0.3)
+    );
+    border-radius: 25px;
+
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-Left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+
+
