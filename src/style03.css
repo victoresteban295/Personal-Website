@@ -190,9 +190,6 @@ h3 {
     margin-top: 0;
 }
 
-
-
-
 .sidecard-footer-social-icons {
     width: 345px;
     height: 50px;
@@ -217,6 +214,7 @@ h3 {
     cursor: pointer;
 }
 
+/* ======= Card Styles ======= */
 
 .card-container {
     margin-top: 10px; /* Same as Sidecard */
@@ -238,6 +236,34 @@ h3 {
     border-Left: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
 }
+
+/* ======= Resume Card Style ======= */
+
+.card-resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .resume-document {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+} */
+
+/* .resume-page-container svg {
+    border-radius: 25px;
+    
+}
+
+.resume-document svg {
+    border-radius: 25px;
+} */
+
+.react-pdf__Page__svg {
+    border-radius: 25px;
+}
+
 
 
 
