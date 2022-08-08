@@ -21,7 +21,7 @@ a {
 
 /* ======= Navigation Bar ======= */
 
-nav {
+.navbar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,33 +30,87 @@ nav {
 }
 
 /* Group of Links */
-.nav-links  ul {
+/* .navbar  ul {
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-.nav-links li {
-    list-style: none; /* Removes Bullet Point */
+.navbar li {
+    list-style: none; 
 }
 
-.nav-links li a { 
-    text-decoration: none; /* Removes Underline */
+
+
+.navbar li a svg {
+    margin-right: 5px;
+} */
+
+.nav-button {
     color: white;
     padding: 1rem;
     display: block;
     font-size: 20px;
 }
 
-.nav-links li a svg {
+.nav-button svg {
     margin-right: 5px;
 }
 
-.nav-button:hover {
-    background-color: #555;
+.nav-button:hover .svg-fill {
     text-decoration: underline;
+    opacity: 1;
 }
 
+.nav-button:hover .svg-empty {
+    opacity: 0;
+}
+
+.svg-empty {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+
+.active .svg-fill {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.active .svg-empty {
+    opacity: 0;
+}
+
+
+.svg-nav {
+    display: flex;
+}
+
+.svg-container {
+    position: relative;
+    display: flex;
+}
+
+.svg-fill {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+.active .nav-text {
+    text-decoration: underline;
+}
 
 
 /* ======= Side-Card Style ======= */

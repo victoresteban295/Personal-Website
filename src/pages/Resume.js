@@ -1,8 +1,8 @@
 import React from "react";
 import { Document, Page, pdfjs } from "react-pdf";
-import Resume from "../images/Resume_Example.pdf"
+import ResumeFile from "../images/Resume_Example.pdf"
 
-export default function Card() {
+export default function Resume() {
 
     const [numPages, setNumPages] = React.useState(null);
     const [pageNum, setPageNum] = React.useState(1);
@@ -17,7 +17,7 @@ export default function Card() {
         <div className="card-container card-resume">
             
                 <Document 
-                    file={Resume} 
+                    file={ResumeFile} 
                     onLoadSuccess={onDocumentLoadSuccess}
                     className="resume-document"
                     renderMode="svg"
