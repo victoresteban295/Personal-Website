@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
 
-    
     var homeFill = 
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
@@ -52,71 +51,59 @@ export default function Navbar() {
     return (
 
         <nav className="navbar">
-            <NavLink to="/" className="nav-button"  >
-                <div className="svg-nav">
-                    <div className="svg-container">
-                        <div className="svg-empty">
-                            {homeEmpty}
-                        </div>
+            <NavLink to="/" className="nav-button"  >           
+                <div className="nav-svg">
+                    <div className="svg-empty">
                         {homeEmpty}
-                        <div className="svg-fill">
-                            {homeFill}
-                        </div>
                     </div>
-                    <div className="nav-text">
-                        Home
+                    <div className="svg-fill">
+                        {homeFill}
                     </div>
+                </div>
+                <div className="nav-text">
+                    Home
                 </div>
             </NavLink>
 
             <NavLink to="/resume" className="nav-button">
-                <div className="svg-nav">
-                    <div className="svg-container">
-                        <div className="svg-empty">
-                            {resumeEmpty}
-                        </div>
+                <div className="nav-svg">
+                    <div className="svg-empty">
                         {resumeEmpty}
-                        <div className="svg-fill">
-                            {resumeFill}
-                        </div>
                     </div>
-                    <div className="nav-text">
-                        Resume
+                    <div className="svg-fill">
+                        {resumeFill}
                     </div>
+                </div>
+                <div className="nav-text">
+                    Resume
                 </div>
             </NavLink>
 
             <NavLink to="/projects" className="nav-button">
-                <div className="svg-nav">
-                    <div className="svg-container">
-                        <div className="svg-empty">
-                            {projectsEmpty}
-                        </div>
+                <div className="nav-svg">
+                    <div className="svg-empty">
                         {projectsEmpty}
-                        <div className="svg-fill">
-                            {projectsFill}
-                        </div>
                     </div>
-                    <div className="nav-text">
-                        Projects
+                    <div className="svg-fill">
+                        {projectsFill}
                     </div>
+                </div>
+                <div className="nav-text">
+                    Projects
                 </div>
             </NavLink>
 
             <NavLink to="/contact" className="nav-button">
-                <div className="svg-nav">
-                    <div className="svg-container">
-                        <div className="svg-empty">
-                            {contactEmpty}
-                        </div>
+                <div className="nav-svg">
+                    <div className="svg-empty">
                         {contactEmpty}
-                        <div className="svg-fill">
-                            {contactFill}
-                        </div>
                     </div>
-                    <div className="nav-text">
-                        Contact
+                    <div className="svg-fill">
+                        {contactFill}
                     </div>
+                </div>
+                <div className="nav-text">
+                    Contact
                 </div>
             </NavLink>
         </nav>

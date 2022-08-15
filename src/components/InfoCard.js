@@ -11,7 +11,7 @@ export default function InfoCard() {
 
             <div className="sidecard--name">
                 <h1 className="name">Victor Esteban</h1>
-                <h3 className="name">Full-Stack Developer</h3>
+                <h3 className="job-title">Full-Stack Developer</h3>
                 
             </div>
 
@@ -46,11 +46,11 @@ export default function InfoCard() {
             <div className="sidecard--about">
                 <h1 className="about">About</h1>
                 <p> 
-                    I am a frontend developer with a particular
-                    interest in making things simple and
-                    automating daily tasks. I try to keep up with 
-                    security and best practices, and am always 
-                    looking for new things to learn.
+                    I'm an aspiring full-stack developer with a 
+                    particular interest in quantum computing. 
+                    Every day I look forward to learning new 
+                    methods and technologies that could 
+                    improve my software engineering skills. 
                 </p>
             </div>
 
