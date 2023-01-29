@@ -40,7 +40,10 @@ const NavBar = () => {
                             <IconButton 
                                 onClick={handleClick}
                                 sx={{
-                                    color: '#fffcf2'
+                                    color: 'text.primary',
+                                    "&:hover": {
+                                        backgroundColor: 'iconColor.hover'
+                                    }
                                 }}
                             >
                                 <MenuIcon fontSize='large' />
@@ -66,9 +69,6 @@ const NavBar = () => {
                             >
                                 <MenuItem 
                                     onClick={handleClose}
-                                    /* sx={{ */
-                                    /*     backgroundColor: 'black' */
-                                    /* }} */
                                 >
                                  {/* Navigation Button: Home */}
                                     <Link href='/' style={{textDecoration: 'none'}}>
@@ -76,10 +76,10 @@ const NavBar = () => {
                                             variant='text' 
                                             startIcon={currentRoute === '/' ? <Home /> : <HomeOutlined />}
                                             sx = {{
-                                                color: 'white',
+                                                color: 'text.primary',
                                                 fontWeight: currentRoute === '/' ? 'bold' : 'normal',
                                                 "&:hover": {
-                                                    backgroundColor: '#403d39'
+                                                    backgroundColor: 'iconColor.hover'
                                                 }
                                             }}
                                         >
@@ -97,10 +97,10 @@ const NavBar = () => {
                                             variant='text' 
                                             startIcon={currentRoute === '/Project' ? <IntegrationInstructions /> : <IntegrationInstructionsOutlined />} 
                                             sx = {{
-                                                color: 'white',
+                                                color: 'text.primary',
                                                 fontWeight: currentRoute === '/Project' ? 'bold' : 'normal',
                                                 "&:hover": {
-                                                    backgroundColor: '#403d39'
+                                                    backgroundColor: 'iconColor.hover'
                                                 }
                                             }}
                                         >
@@ -118,10 +118,10 @@ const NavBar = () => {
                                             variant='text' 
                                             startIcon={currentRoute === '/Resume' ? <Article /> : <ArticleOutlined />} 
                                             sx = {{
-                                                color: 'white',
+                                                color: 'text.primary',
                                                 fontWeight: currentRoute === '/Resume' ? 'bold' : 'normal',
                                                 "&:hover": {
-                                                    backgroundColor: '#403d39'
+                                                    backgroundColor: 'iconColor.hover'
                                                 }
                                             }}
                                         >
@@ -146,10 +146,10 @@ const NavBar = () => {
                                     variant='text' 
                                     startIcon={currentRoute === '/' ? <Home /> : <HomeOutlined />}
                                     sx = {{
-                                        color: '#fffcf2',
+                                        color: 'text.primary',
                                         fontWeight: currentRoute === '/' ? 'bold' : 'normal',
                                         "&:hover": {
-                                            backgroundColor: '#403d39'
+                                            backgroundColor: 'iconColor.hover'
                                         }
                                     }}
                                 >
@@ -163,10 +163,10 @@ const NavBar = () => {
                                     variant='text' 
                                     startIcon={currentRoute === '/Project' ? <IntegrationInstructions /> : <IntegrationInstructionsOutlined />} 
                                     sx = {{
-                                        color: '#fffcf2',
+                                        color: 'text.primary',
                                         fontWeight: currentRoute === '/Project' ? 'bold' : 'normal',
                                         "&:hover": {
-                                            backgroundColor: '#403d39'
+                                            backgroundColor: 'iconColor.hover'
                                         }
                                     }}
                                 >
@@ -180,10 +180,10 @@ const NavBar = () => {
                                     variant='text' 
                                     startIcon={currentRoute === '/Resume' ? <Article /> : <ArticleOutlined />} 
                                     sx = {{
-                                        color: '#fffcf2',
+                                        color: 'text.primary',
                                         fontWeight: currentRoute === '/Resume' ? 'bold' : 'normal',
                                         "&:hover": {
-                                            backgroundColor: '#403d39'
+                                            backgroundColor: 'iconColor.hover'
                                         }
                                     }}
                                 >

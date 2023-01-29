@@ -30,7 +30,7 @@ const Custom404 = () => {
                         textAlign: 'left',
                         width: '100%',
                         borderRadius: '15px',
-                        backgroundColor: '#403d39',
+                        backgroundColor: 'secondary.main',
                         alignItems: 'center',
                         justifyContent: 'space-between',
                         mt: 1.5,
@@ -58,8 +58,8 @@ const Custom404 = () => {
                                 variant='contained' 
                                 startIcon={<LowPriority />}
                                 sx = {{
-                                    color: '#252422',
-                                    backgroundColor: '#ccc5b9',
+                                    color: 'text.primary',
+                                    backgroundColor: '#eb5e28',
                                     fontWeight: 'bold',
                                     my: 2,
                                     "&:hover": {
