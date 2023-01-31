@@ -11,7 +11,7 @@ const Education = () => {
                 textAlign: 'left',
                 width: '100%',
                 borderRadius: '15px',
-                backgroundColor: 'primary.main',
+                backgroundColor: 'secondary.main',
                 boxShadow: '1px 1px 10px #000',
                 mt: 2,
                 py: 2,

@@ -1,9 +1,12 @@
 import NavBar from "./Navbar"
 
-const Layout = ({ children }) => {
+const Layout = ({ children }, props) => {
     return (
         <div>
-            <NavBar />
+            <NavBar 
+                isDarkMode={props.darkMode}
+                handleClick={props.handleClick}
+            />
             { children }
         </div>
     )

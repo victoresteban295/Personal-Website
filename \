@@ -1,12 +1,18 @@
 import { Typography, Box } from "@mui/material"
-import {Cabin} from '@next/font/google'
-
-const cabin = Cabin({
-    weight: '700',
-    subsets: ['latin'],
-})
+import { IBM_Plex_Serif } from "@next/font/google"
 
 const Introduction = () => {
+
+    const IbmPlexSerif = IBM_Plex_Serif({
+        weight: '400',
+        subset: ['latin'],
+    })
+
+    const Ibm = IBM_Plex_Serif({
+        weight: '400',
+        subset: ['latin'],
+    })
+
     return (
         <Box
             id = "name-section"
@@ -29,7 +35,7 @@ const Introduction = () => {
                     textAlign: {xs: 'center', sm: 'left'}
                 }}
             >
-                <Typography variant='h3' className={cabin.className}>
+                <Typography variant='h3' className={Ibm.className}>
                     Victor Manuel Esteban
                 </Typography>
                 <Typography
@@ -37,7 +43,6 @@ const Introduction = () => {
                     sx={{
                         color: '#eb5e28',
                     }}
-                    className={cabin.className}
                 >
                     Full Stack Developer 
                 </Typography>

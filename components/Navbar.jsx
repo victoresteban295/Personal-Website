@@ -6,7 +6,7 @@ import {HomeOutlined, IntegrationInstructionsOutlined, ArticleOutlined} from '@m
 import {Home, IntegrationInstructions, Article, DarkMode, LightMode} from '@mui/icons-material'
 import MenuIcon from '@mui/icons-material/Menu'
 
-const NavBar = () => {
+const NavBar = (props) => {
 
     /* Use to Determine Active Page For Navigation */
     const router = useRouter();
@@ -194,15 +194,16 @@ const NavBar = () => {
 
                         <IconButton 
                             sx={{
-                                color: '#403d39',
-                                backgroundColor: '#fffcf2',
+                                color: 'darkMode.icon',
+                                backgroundColor: 'darkMode.background',
                                 "&:hover": {
-                                    color: 'yellow'
+                                    color: 'darkMode.hover'
                                 }
                             }}
                             size="small"
+                            onClick={props.handleClick}
                         >
-                            <LightMode />
+                            {props.isDarkMode ? <LightMode /> : <DarkMode />}
                         </IconButton> 
                     </Toolbar>
                 </Container>
