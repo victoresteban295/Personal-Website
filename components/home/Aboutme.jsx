@@ -1,4 +1,16 @@
 import { Typography, Box } from "@mui/material"
+import { Cabin } from '@next/font/google'
+import { motion } from 'framer-motion'
+
+const cabin = Cabin({
+    weight: '700',
+    subsets: ['latin'],
+})
+
+const cabinBody = Cabin({
+    weight: '400',
+    subsets: ['latin'],
+})
 
 const Aboutme = () => {
     return (
@@ -19,6 +31,7 @@ const Aboutme = () => {
         >
             <Typography
                 variant="h5"
+                className={cabin.className}
                 sx={{
                     m: 0,
                     mb: 1,
@@ -29,6 +42,7 @@ const Aboutme = () => {
             </Typography> 
             <Typography
                 variant="body1"
+                className={cabinBody.className}
             >
                 I’m a 1st generation Mexican American 
                 born and raised in South Central Los Angeles. I attended 

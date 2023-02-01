@@ -1,4 +1,16 @@
 import { Typography, Box, List, ListItem } from "@mui/material"
+import { Cabin, Inter } from '@next/font/google'
+
+const cabin = Cabin({
+    weight: '700',
+    subsets: ['latin'],
+})
+
+const cabinBody = Cabin({
+    weight: '400',
+    subsets: ['latin'],
+})
+
 
 const Volunteer = () => {
     return (
@@ -19,6 +31,7 @@ const Volunteer = () => {
         >
             <Typography
                 variant="h5"
+                className={cabin.className}
                 sx={{
                     my: 1,
                 }}
@@ -35,6 +48,7 @@ const Volunteer = () => {
             >
                 <Typography
                     varitant='h5'
+                    className={cabin.className}
                     sx={{
                         fontWeight: 'bold',
                         my: 0,
@@ -45,6 +59,7 @@ const Volunteer = () => {
                 </Typography> 
                 <Typography
                     varitant='body1'
+                    className={cabin.className}
                     sx={{
                         my: 0,
                         py: 0,
@@ -67,6 +82,7 @@ const Volunteer = () => {
                     >
                         <Typography
                             variant='body1'
+                            className={cabinBody.className}
                         >
                             Volunteered to host a prospective student in our dormitory
                             for a night or two.
@@ -80,6 +96,7 @@ const Volunteer = () => {
                     >
                         <Typography
                             variant='body1'
+                            className={cabinBody.className}
                         >
                             Accommodated students by creating a welcoming environment on 
                             campus.
@@ -93,6 +110,7 @@ const Volunteer = () => {
                     >
                         <Typography
                             variant='body1'
+                            className={cabinBody.className}
                         >
                             Guided the student around campus and ensured they were on time for their
                             morning events.
@@ -110,6 +128,7 @@ const Volunteer = () => {
             >
                 <Typography
                     varitant='h5'
+                    className={cabin.className}
                     sx={{
                         fontWeight: 'bold',
                         my: 0,
@@ -120,6 +139,7 @@ const Volunteer = () => {
                 </Typography> 
                 <Typography
                     varitant='body1'
+                    className={cabin.className}
                     sx={{
                         my: 0,
                         py: 0,
@@ -142,6 +162,7 @@ const Volunteer = () => {
                     >
                         <Typography
                             variant='body1'
+                            className={cabinBody.className}
                         >
                             Chaperone prospective students, making sure they're on schedule 
                             for their events.
@@ -155,6 +176,7 @@ const Volunteer = () => {
                     >
                         <Typography
                             variant='body1'
+                            className={cabinBody.className}
                         >
                             Responsible for providing them a glimpse into everyday life as
                             an Albion College Student.
@@ -168,6 +190,7 @@ const Volunteer = () => {
                     >
                         <Typography
                             variant='body1'
+                            className={cabinBody.className}
                         >
                             Recommended students the appropriate resources needed to succeed 
                             at Albion.
@@ -185,6 +208,7 @@ const Volunteer = () => {
             >
                 <Typography
                     varitant='h5'
+                    className={cabin.className}
                     sx={{
                         fontWeight: 'bold',
                         my: 0,
@@ -195,6 +219,7 @@ const Volunteer = () => {
                 </Typography> 
                 <Typography
                     varitant='body1'
+                    className={cabin.className}
                     sx={{
                         my: 0,
                         py: 0,
@@ -217,6 +242,7 @@ const Volunteer = () => {
                     >
                         <Typography
                             variant='body1'
+                            className={cabinBody.className}
                         >
                             Monitored student's projects to ensure that the lab and its equipment
                             were respected.
@@ -230,6 +256,7 @@ const Volunteer = () => {
                     >
                         <Typography
                             variant='body1'
+                            className={cabinBody.className}
                         >
                             Worked closely with the club's president and treasury to process student
                             request for item purchases.
@@ -247,6 +274,7 @@ const Volunteer = () => {
             >
                 <Typography
                     varitant='h5'
+                    className={cabin.className}
                     sx={{
                         fontWeight: 'bold',
                         my: 0,
@@ -257,6 +285,7 @@ const Volunteer = () => {
                 </Typography> 
                 <Typography
                     varitant='body1'
+                    className={cabin.className}
                     sx={{
                         my: 0,
                         py: 0,
@@ -279,6 +308,7 @@ const Volunteer = () => {
                     >
                         <Typography
                             variant='body1'
+                            className={cabinBody.className}
                         >
                             Organized, advertised, and hosted recritment events around campus.
                         </Typography>
@@ -291,6 +321,7 @@ const Volunteer = () => {
                     >
                         <Typography
                             variant='body1'
+                            className={cabinBody.className}
                         >
                             Assisted potential new members in the application process and 
                             ensured they fulfilled all the required requisites.

@@ -1,4 +1,10 @@
 import { Typography, Box } from "@mui/material"
+import { Cabin } from '@next/font/google'
+
+const cabin = Cabin({
+    weight: '700',
+    subsets: ['latin'],
+})
 
 const Comingsoon = () => {
     return (
@@ -19,6 +25,7 @@ const Comingsoon = () => {
         >
             <Typography
                 variant="h4"
+                className={cabin.className}
                 sx={{
                     textAlign: 'center'
                 }}

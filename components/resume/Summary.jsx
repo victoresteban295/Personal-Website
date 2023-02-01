@@ -1,4 +1,15 @@
 import { Typography, Box } from "@mui/material"
+import { Cabin } from '@next/font/google'
+
+const cabin = Cabin({
+    weight: '700',
+    subsets: ['latin'],
+})
+
+const cabinBody = Cabin({
+    weight: '400',
+    subsets: ['latin'],
+})
 
 const Summary = () => {
     return (
@@ -19,6 +30,7 @@ const Summary = () => {
         >
             <Typography
                 variant="h5"
+                className={cabin.className}
                 sx={{
                     m: 0,
                     mb: 1,
@@ -29,6 +41,7 @@ const Summary = () => {
             </Typography> 
             <Typography
                 variant="body1"
+                className={cabinBody.className}
             >
                 Enthusiastic software engineer devoted to developing new
                 software technologies that will improve the function of your 

@@ -1,5 +1,12 @@
-import { Typography, Box, List, ListItem, ListItemAvatar, ListItemText, Avatar } from "@mui/material"
+import { Typography, Box, List, ListItem, ListItemAvatar, ListItemText, Avatar, Tooltip} from "@mui/material"
 import { Mail, PhoneIphone } from '@mui/icons-material'
+import { Cabin } from '@next/font/google'
+import { motion } from 'framer-motion'
+
+const cabin = Cabin({
+    weight: '700',
+    subsets: ['latin'],
+})
 
 const Contact = () => {
     return (
@@ -21,6 +28,7 @@ const Contact = () => {
         >
             <Typography
                 variant="h5"
+                className={cabin.className}
                 sx={{
                     m: 0,
                     p: 0,
@@ -36,19 +44,25 @@ const Contact = () => {
             >
                 <ListItem>
                     <ListItemAvatar>
-                        <Avatar
-                            sx={{
-                                color: 'iconColor.icon',
-                                backgroundColor: 'iconColor.background',
-                            }}
+                        <Tooltip
+                            title="Cellphone"
+                            followCursor
                         >
-                            <PhoneIphone />
-                        </Avatar>
+                            <Avatar
+                                sx={{
+                                    color: 'iconColor.icon',
+                                    backgroundColor: 'iconColor.background',
+                                }}
+                            >
+                                <PhoneIphone />
+                            </Avatar>
+                        </Tooltip>
                     </ListItemAvatar>
                     <ListItemText 
                         primary= {
                             <Typography
                                 variant='h6'
+                                className={cabin.className}
                             >
                                (562) 396-9876 
                             </Typography>
@@ -57,19 +71,25 @@ const Contact = () => {
                 </ListItem>
                 <ListItem>
                     <ListItemAvatar>
-                        <Avatar
-                            sx={{
-                                color: 'iconColor.icon',
-                                backgroundColor: 'iconColor.background'
-                            }}
+                        <Tooltip
+                            title="Email"
+                            followCursor
                         >
-                            <Mail />
-                        </Avatar>
+                            <Avatar
+                                sx={{
+                                    color: 'iconColor.icon',
+                                    backgroundColor: 'iconColor.background'
+                                }}
+                            >
+                                <Mail />
+                            </Avatar>
+                        </Tooltip>
                     </ListItemAvatar>
                     <ListItemText 
                         primary= {
                             <Typography
                                 variant='h6'
+                                className={cabin.className}
                             >
                                victoresteban 295@gmail.com
                             </Typography>

@@ -1,4 +1,5 @@
 import { Box } from "@mui/material"
+import { motion } from 'framer-motion'
 
 import Summary from "@/components/resume/Summary"
 import Education from "@/components/resume/Education"
@@ -25,10 +26,22 @@ const Resume = () => {
                     mx: 1,
                 }}
             >
-                <Summary /> 
-                <Education />
-                <Volunteer />
-                <Skill />
+                <motion.div
+                    animate={{
+                        y: 0,
+                    }} 
+                    initial={{
+                        y: 1500,
+                    }}
+                    transition= {{
+                        duration: 0.5,
+                    }}
+                >
+                    <Summary /> 
+                    <Education />
+                    <Volunteer />
+                    <Skill />
+                </motion.div>
             </Box>
         </Box>
     )

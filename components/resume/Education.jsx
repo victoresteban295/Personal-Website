@@ -1,5 +1,16 @@
 import { AccountBalance, School } from "@mui/icons-material"
 import { Typography, Box, Avatar } from "@mui/material"
+import { Cabin, Inter } from '@next/font/google'
+
+const cabin = Cabin({
+    weight: '700',
+    subsets: ['latin'],
+})
+
+const cabinBody = Cabin({
+    weight: '400',
+    subsets: ['latin'],
+})
 
 const Education = () => {
     return (
@@ -20,6 +31,7 @@ const Education = () => {
         >
             <Typography
                 variant="h5"
+                className={cabin.className}
                 sx={{
                     my: 1,
                 }}
@@ -57,6 +69,7 @@ const Education = () => {
                     >
                         <Typography
                             varitant='h5'
+                            className={cabin.className}
                             sx={{
                                 fontWeight: 'bold',
                                 my: 0,
@@ -67,6 +80,7 @@ const Education = () => {
                         </Typography> 
                         <Typography
                             varitant='body1'
+                            className={cabinBody.className}
                             sx={{
                                 my: 0,
                                 py: 0,
@@ -76,6 +90,7 @@ const Education = () => {
                         </Typography> 
                         <Typography
                             varitant='body1'
+                            className={cabinBody.className}
                             sx={{
                                 my: 0,
                                 py: 0,
@@ -85,6 +100,7 @@ const Education = () => {
                         </Typography> 
                         <Typography
                             varitant='body2'
+                            className={cabinBody.className}
                             sx={{
                                 my: 0,
                                 py: 0,
@@ -132,6 +148,7 @@ const Education = () => {
                     >
                         <Typography
                             varitant='h5'
+                            className={cabin.className}
                             sx={{
                                 fontWeight: 'bold',
                                 my: 0,
@@ -142,6 +159,7 @@ const Education = () => {
                         </Typography> 
                         <Typography
                             varitant='body1'
+                            className={cabinBody.className}
                             sx={{
                                 my: 0,
                                 py: 0,
@@ -151,6 +169,7 @@ const Education = () => {
                         </Typography> 
                         <Typography
                             varitant='body2'
+                            className={cabinBody.className}
                             sx={{
                                 my: 0,
                                 py: 0,

@@ -1,5 +1,6 @@
 import { Typography, Box } from "@mui/material"
 import {Cabin} from '@next/font/google'
+import { motion } from 'framer-motion'
 
 const cabin = Cabin({
     weight: '700',

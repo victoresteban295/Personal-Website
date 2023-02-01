@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box } from "@mui/material"
+import { motion } from 'framer-motion'
 
 import Introduction from '@/components/home/Introduction'
 import Aboutme from '@/components/home/Aboutme' 
@@ -26,10 +27,22 @@ const Home = () => {
                     mx: 1,
                 }}
             >
-                <Introduction />
-                <Aboutme />
-                <Contact />
-                <Social />
+                <motion.div
+                    animate={{
+                        y: 0,
+                    }} 
+                    initial={{
+                        y: 1000,
+                    }}
+                    transition= {{
+                        duration: 0.5,
+                    }}
+                >
+                    <Introduction />
+                    <Aboutme />
+                    <Contact />
+                    <Social />
+                </motion.div>
             </Box>
         </Box>
     )

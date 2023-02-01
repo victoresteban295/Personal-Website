@@ -32,7 +32,12 @@ const MyApp = ({Component, pageProps}) => {
                 background: '#fffcf2',
                 hover: '#ffff00'
             }
-        }
+        },
+        /* typography: { */
+        /*     body1: { */
+        /*         fontSize: "1.25rem", */
+        /*     } */
+        /* } */
     });
 
     darkTheme = responsiveFontSizes(darkTheme);

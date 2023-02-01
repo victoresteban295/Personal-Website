@@ -1,4 +1,15 @@
 import { Typography, Box, List, ListItem } from "@mui/material"
+import { Cabin } from '@next/font/google'
+
+const cabin = Cabin({
+    weight: '700',
+    subsets: ['latin'],
+})
+
+const cabinBody = Cabin({
+    weight: '400',
+    subsets: ['latin'],
+})
 
 const Skill = () => {
     return (
@@ -19,6 +30,7 @@ const Skill = () => {
         >
             <Typography
                 variant="h5"
+                className={cabin.className}
                 sx={{
                     my: 1,
                 }}
@@ -35,6 +47,7 @@ const Skill = () => {
             >
                 <Typography
                     varitant='h5'
+                    className={cabin.className}
                     sx={{
                         fontWeight: 'bold',
                         my: 0,
@@ -67,7 +80,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1'>
+                                <Typography variant='body1' className={cabinBody.className}>
                                     Java
                                 </Typography>
                             </ListItem>                 
@@ -77,7 +90,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1'>
+                                <Typography variant='body1' className={cabinBody.className}>
                                     Javascript
                                 </Typography>
                             </ListItem>                 
@@ -87,7 +100,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1'>
+                                <Typography variant='body1' className={cabinBody.className}>
                                     CSS & HTML
                                 </Typography>
                             </ListItem>                 
@@ -97,7 +110,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1'>
+                                <Typography variant='body1' className={cabinBody.className}>
                                     React
                                 </Typography>
                             </ListItem>                 
@@ -119,7 +132,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1'>
+                                <Typography variant='body1' className={cabinBody.className}>
                                     NextJS
                                 </Typography>
                             </ListItem>                 
@@ -129,7 +142,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1'>
+                                <Typography variant='body1' className={cabinBody.className}>
                                     Spring
                                 </Typography>
                             </ListItem>                 
@@ -139,7 +152,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1'>
+                                <Typography variant='body1' className={cabinBody.className}>
                                     Spring Boot
                                 </Typography>
                             </ListItem>                 
@@ -149,7 +162,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1'>
+                                <Typography variant='body1' className={cabinBody.className}>
                                     Spring Data
                                 </Typography>
                             </ListItem>                 
@@ -171,7 +184,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1'>
+                                <Typography variant='body1' className={cabinBody.className}>
                                     Spring Security
                                 </Typography>
                             </ListItem>                 
@@ -181,7 +194,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1'>
+                                <Typography variant='body1' className={cabinBody.className}>
                                     Apache Cassandra
                                 </Typography>
                             </ListItem>                 
@@ -199,6 +212,7 @@ const Skill = () => {
             >
                 <Typography
                     varitant='h5'
+                    className={cabin.className}
                     sx={{
                         fontWeight: 'bold',
                         my: 0,
@@ -231,7 +245,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1'>
+                                <Typography variant='body1' className={cabinBody.className}>
                                     Bilingual - Fluent in Spanish & English
                                 </Typography>
                             </ListItem>                 

@@ -1,5 +1,6 @@
 import { Box } from "@mui/material"
 import Comingsoon from "@/components/projects/ComingSoon"
+import { motion } from 'framer-motion'
 
 const Project = () => {
     return (
@@ -21,7 +22,19 @@ const Project = () => {
                     mx: 1,
                 }}
             >
-                <Comingsoon />
+                <motion.div
+                    animate={{
+                        y: 0,
+                    }} 
+                    initial={{
+                        y: 1000,
+                    }}
+                    transition= {{
+                        duration: 0.5,
+                    }}
+                >
+                    <Comingsoon />
+                </motion.div>
             </Box>
         </Box>
     )

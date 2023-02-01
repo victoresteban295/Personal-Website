@@ -1,5 +1,13 @@
-import { Typography, Box, List, ListItem, ListItemAvatar, ListItemText, Avatar } from "@mui/material"
+import { Typography, Box, List, ListItem, ListItemAvatar, ListItemText, Avatar, Tooltip } from "@mui/material"
 import { GitHub, Instagram, LinkedIn } from '@mui/icons-material'
+import { Cabin } from '@next/font/google'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+
+const cabin = Cabin({
+    weight: '700',
+    subsets: ['latin'],
+})
 
 const Social = () => {
     return (
@@ -21,6 +29,7 @@ const Social = () => {
         >
             <Typography
                 variant="h5"
+                className={cabin.className}
                 sx={{
                     m: 0,
                     p: 0,
@@ -35,20 +44,31 @@ const Social = () => {
                 }}
             >
                 <ListItem>
-                    <ListItemAvatar>
-                        <Avatar
-                            sx={{
-                                color: 'iconColor.icon',
-                                backgroundColor: 'iconColor.background',
-                            }}
-                        >
-                            <LinkedIn />
-                        </Avatar>
-                    </ListItemAvatar>
+                    <Link
+                        href='https://www.linkedin.com/in/victor-esteban295'
+                        style={{textDecoration: 'none'}}
+                    >
+                        <ListItemAvatar>
+                            <Tooltip
+                                title="LinkedIn"
+                                followCursor
+                            >
+                                <Avatar
+                                    sx={{
+                                        color: 'iconColor.icon',
+                                        backgroundColor: 'iconColor.background',
+                                    }}
+                                >
+                                    <LinkedIn />
+                                </Avatar>
+                            </Tooltip>
+                        </ListItemAvatar>
+                    </Link>
                     <ListItemText 
                         primary= {
                             <Typography
                                 variant='h6'
+                                className={cabin.className}
                             >
                                 @victor-esteban295
                             </Typography>
@@ -56,20 +76,31 @@ const Social = () => {
                     />
                 </ListItem>
                 <ListItem>
-                    <ListItemAvatar>
-                        <Avatar
-                            sx={{
-                                color: 'iconColor.icon',
-                                backgroundColor: 'iconColor.background'
-                            }}
-                        >
-                            <GitHub />
-                        </Avatar>
-                    </ListItemAvatar>
+                    <Link
+                        href='https://www.github.com/victoresteban295'
+                        style={{textDecoration: 'none'}}
+                    >
+                        <ListItemAvatar>
+                            <Tooltip
+                                title="GitHub"
+                                followCursor
+                            >
+                                <Avatar
+                                    sx={{
+                                        color: 'iconColor.icon',
+                                        backgroundColor: 'iconColor.background',
+                                    }}
+                                >
+                                    <GitHub />
+                                </Avatar>
+                            </Tooltip>
+                        </ListItemAvatar>
+                    </Link>
                     <ListItemText 
                         primary= {
                             <Typography
                                 variant='h6'
+                                className={cabin.className}
                             >
                                @victoresteban295
                             </Typography>
@@ -77,20 +108,31 @@ const Social = () => {
                     />
                 </ListItem>
                 <ListItem>
-                    <ListItemAvatar>
-                        <Avatar
-                            sx={{
-                                color: 'iconColor.icon',
-                                backgroundColor: 'iconColor.background'
-                            }}
-                        >
-                            <Instagram />
-                        </Avatar>
-                    </ListItemAvatar>
+                    <Link
+                        href='https://www.instagram.com'
+                        style={{textDecoration: 'none'}}
+                    >
+                        <ListItemAvatar>
+                            <Tooltip
+                                title="Instagram"
+                                followCursor
+                            >
+                                <Avatar
+                                    sx={{
+                                        color: 'iconColor.icon',
+                                        backgroundColor: 'iconColor.background',
+                                    }}
+                                >
+                                    <Instagram />
+                                </Avatar>
+                            </Tooltip>
+                        </ListItemAvatar>
+                    </Link>
                     <ListItemText 
                         primary= {
                             <Typography
                                 variant='h6'
+                                className={cabin.className}
                             >
                                @victor_m.esteban
                             </Typography>
