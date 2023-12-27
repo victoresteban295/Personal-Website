@@ -6,7 +6,6 @@ import NavBar from '@/components/Navbar'
 
 const MyApp = ({Component, pageProps}) => {
 
-
     let darkTheme = createTheme({
         palette: {
             primary: {

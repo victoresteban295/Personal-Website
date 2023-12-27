@@ -1,7 +1,6 @@
 import { Typography, Box, List, ListItem, ListItemAvatar, ListItemText, Avatar, Tooltip } from "@mui/material"
 import { GitHub, Instagram, LinkedIn } from '@mui/icons-material'
 import { Cabin } from '@next/font/google'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 const cabin = Cabin({
@@ -19,10 +18,6 @@ const Social = () => {
                 textAlign: 'left',
                 alignSelf: 'flex-start',
                 width: '100%',
-                borderRadius: '15px',
-                backgroundColor: 'secondary.main',
-                boxShadow: '1px 1px 10px #000',
-                my: 2,
                 py: 2,
                 px: 2,
             }}

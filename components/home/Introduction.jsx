@@ -1,6 +1,5 @@
 import { Typography, Box } from "@mui/material"
 import {Cabin} from '@next/font/google'
-import { motion } from 'framer-motion'
 
 const cabin = Cabin({
     weight: '700',
@@ -16,10 +15,6 @@ const Introduction = () => {
                 flexDirection: {xs: 'column', sm: 'row'},
                 alignItems: 'center',
                 width: '100%',
-                borderRadius: '15px',
-                backgroundColor: 'secondary.main',
-                boxShadow: '1px 1px 10px #000',
-                mt: 2,
                 py: 1,
                 px: 2,
             }}

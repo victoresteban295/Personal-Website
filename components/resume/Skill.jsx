@@ -20,10 +20,6 @@ const Skill = () => {
                 flexDirection: 'column',
                 textAlign: 'left',
                 width: '100%',
-                borderRadius: '15px',
-                backgroundColor: 'secondary.main',
-                boxShadow: '1px 1px 10px #000',
-                my: 2,
                 py: 2,
                 px: 3,
             }}
