@@ -1,9 +1,9 @@
 import { Typography, Box, List, ListItem, ListItemAvatar, ListItemText, Avatar, Tooltip } from "@mui/material"
 import { GitHub, Instagram, LinkedIn } from '@mui/icons-material'
-import { Cabin } from '@next/font/google'
 import Link from 'next/link'
+import { Teko } from "next/font/google"
 
-const cabin = Cabin({
+const teko = Teko({
     weight: '700',
     subsets: ['latin'],
 })
@@ -19,19 +19,27 @@ const Social = () => {
                 alignSelf: 'flex-start',
                 width: '100%',
                 py: 2,
-                px: 2,
+                px: 3,
             }}
         >
-            <Typography
-                variant="h5"
-                className={cabin.className}
+            <Box
                 sx={{
-                    m: 0,
-                    p: 0,
+                    display: 'flex',
                 }}
             >
-                Socials
-            </Typography> 
+                <Typography
+                    variant="h5"
+                    sx={{
+                        fontFamily: teko.style.fontFamily,
+                        borderBottom: '4px solid',
+                        m: 0,
+                        mb: 1,
+                        p: 0,
+                    }}
+                >
+                    Socials
+                </Typography> 
+            </Box>
             <List
                 sx={{
                     m: 0,
@@ -63,7 +71,6 @@ const Social = () => {
                         primary= {
                             <Typography
                                 variant='h6'
-                                className={cabin.className}
                             >
                                 @victor-esteban295
                             </Typography>
@@ -95,7 +102,6 @@ const Social = () => {
                         primary= {
                             <Typography
                                 variant='h6'
-                                className={cabin.className}
                             >
                                @victoresteban295
                             </Typography>
@@ -127,7 +133,6 @@ const Social = () => {
                         primary= {
                             <Typography
                                 variant='h6'
-                                className={cabin.className}
                             >
                                @victor_m.esteban
                             </Typography>

@@ -1,8 +1,8 @@
 import { Typography, Box, List, ListItem, ListItemAvatar, ListItemText, Avatar, Tooltip} from "@mui/material"
 import { Mail, PhoneIphone } from '@mui/icons-material'
-import { Cabin } from '@next/font/google'
+import { Teko } from "next/font/google"
 
-const cabin = Cabin({
+const teko = Teko({
     weight: '700',
     subsets: ['latin'],
 })
@@ -18,19 +18,27 @@ const Contact = () => {
                 alignSelf: 'flex-start',
                 width: '100%',
                 py: 2,
-                px: 2,
+                px: 3,
             }}
         >
-            <Typography
-                variant="h5"
-                className={cabin.className}
+            <Box
                 sx={{
-                    m: 0,
-                    p: 0,
+                    display: 'flex',
                 }}
             >
-                Contact
-            </Typography> 
+                <Typography
+                    variant="h5"
+                    sx={{
+                        fontFamily: teko.style.fontFamily,
+                        borderBottom: '4px solid',
+                        m: 0,
+                        mb: 1,
+                        p: 0,
+                    }}
+                >
+                    Contact
+                </Typography> 
+            </Box>
             <List
                 sx={{
                     m: 0,
@@ -57,7 +65,6 @@ const Contact = () => {
                         primary= {
                             <Typography
                                 variant='h6'
-                                className={cabin.className}
                             >
                                (562) 396-9876 
                             </Typography>
@@ -84,7 +91,6 @@ const Contact = () => {
                         primary= {
                             <Typography
                                 variant='h6'
-                                className={cabin.className}
                             >
                                victoresteban 295@gmail.com
                             </Typography>

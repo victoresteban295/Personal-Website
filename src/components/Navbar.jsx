@@ -1,19 +1,19 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
-import { useRouter } from 'next/router'
-import {Typography, AppBar, CssBaseline, Toolbar, Container, Box, Button, IconButton, Menu, MenuItem} from '@mui/material'
+import { AppBar, Toolbar, Container, Box, Button, IconButton, Menu, MenuItem} from '@mui/material'
 import {HomeOutlined, IntegrationInstructionsOutlined, ArticleOutlined} from '@mui/icons-material'
 import {Home, IntegrationInstructions, Article, DarkMode, LightMode} from '@mui/icons-material'
 import MenuIcon from '@mui/icons-material/Menu'
+import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 
-const NavBar = (props) => {
+const NavBar = () => {
 
     /* Use to Determine Active Page For Navigation */
-    const router = useRouter();
-    const currentRoute = router.pathname; // Current Path 
+    const currentRoute = usePathname();
 
     /* Hamburger Menu Config */
-    const [anchorEl, setAnchorEl] = React.useState(null); // State: Determine HTML Element that Menu will Attach To
+    const [anchorEl, setAnchorEl] = useState(null); // State: Determine HTML Element that Menu will Attach To
     const open = Boolean(anchorEl); // If Parameter is an object -> true, else null -> false boolean value
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget); // Menu attaches to HTML Element that's triggering event 
@@ -22,6 +22,24 @@ const NavBar = (props) => {
         setAnchorEl(null); // Menu has no HTML Element to attach to
     };
 
+    const [isDarkMode, setDarkMode] = useState(true);
+    useEffect(() => {
+        let theme = localStorage.getItem("theme");
+        if(theme === "light") {
+            setDarkMode(false);
+        }
+    }, []);
+
+    /* Change DarkMode */
+    const toggleDarkMode = () => {
+        if(isDarkMode) {
+            localStorage.setItem("theme", "light");         
+            setDarkMode(false);
+        } else {
+            localStorage.setItem("theme", "dark");         
+            setDarkMode(true);
+        }
+    }
 
     return (
         <Box sx={{ flexGrow: 1, position: 'sticky', top: '0px', zIndex: '999' }}>
@@ -53,11 +71,6 @@ const NavBar = (props) => {
                                 anchorEl={anchorEl}
                                 open={open}
                                 onClose={handleClose}
-                                /* sx={{ */
-                                /*     "& .MuiPaper-root" : { */
-                                /*         backgroundColor: 'black' */
-                                /*     } */
-                                /* }} */
                                 anchorOrigin={{
                                     vertical: 'top',
                                     horizontal: 'left',
@@ -92,13 +105,13 @@ const NavBar = (props) => {
                                     onClick={handleClose}
                                 >
                                     {/* Navigation Button: Projects */}
-                                    <Link href='/Project' style={{textDecoration: 'none'}}>
+                                    <Link href='/projects' style={{textDecoration: 'none'}}>
                                         <Button 
                                             variant='text' 
-                                            startIcon={currentRoute === '/Project' ? <IntegrationInstructions /> : <IntegrationInstructionsOutlined />} 
+                                            startIcon={currentRoute === '/projects' ? <IntegrationInstructions /> : <IntegrationInstructionsOutlined />} 
                                             sx = {{
                                                 color: 'text.primary',
-                                                fontWeight: currentRoute === '/Project' ? 'bold' : 'normal',
+                                                fontWeight: currentRoute === '/projects' ? 'bold' : 'normal',
                                                 "&:hover": {
                                                     backgroundColor: 'iconColor.hover'
                                                 }
@@ -113,13 +126,13 @@ const NavBar = (props) => {
                                     onClick={handleClose}
                                 >
                                     {/* Navigation Button: Resume */}
-                                    <Link href='/Resume' style={{textDecoration: 'none'}}>
+                                    <Link href='/resume' style={{textDecoration: 'none'}}>
                                         <Button 
                                             variant='text' 
-                                            startIcon={currentRoute === '/Resume' ? <Article /> : <ArticleOutlined />} 
+                                            startIcon={currentRoute === '/resume' ? <Article /> : <ArticleOutlined />} 
                                             sx = {{
                                                 color: 'text.primary',
-                                                fontWeight: currentRoute === '/Resume' ? 'bold' : 'normal',
+                                                fontWeight: currentRoute === '/resume' ? 'bold' : 'normal',
                                                 "&:hover": {
                                                     backgroundColor: 'iconColor.hover'
                                                 }
@@ -158,13 +171,13 @@ const NavBar = (props) => {
                             </Link>
 
                             {/* Navigation Button: Projects */}
-                            <Link href='/Project' style={{textDecoration: 'none'}}>
+                            <Link href='/projects' style={{textDecoration: 'none'}}>
                                 <Button 
                                     variant='text' 
-                                    startIcon={currentRoute === '/Project' ? <IntegrationInstructions /> : <IntegrationInstructionsOutlined />} 
+                                    startIcon={currentRoute === '/projects' ? <IntegrationInstructions /> : <IntegrationInstructionsOutlined />} 
                                     sx = {{
                                         color: 'text.primary',
-                                        fontWeight: currentRoute === '/Project' ? 'bold' : 'normal',
+                                        fontWeight: currentRoute === '/projects' ? 'bold' : 'normal',
                                         "&:hover": {
                                             backgroundColor: 'iconColor.hover'
                                         }
@@ -175,13 +188,13 @@ const NavBar = (props) => {
                             </Link>
 
                             {/* Navigation Button: Resume */}
-                            <Link href='/Resume' style={{textDecoration: 'none'}}>
+                            <Link href='/resume' style={{textDecoration: 'none'}}>
                                 <Button 
                                     variant='text' 
-                                    startIcon={currentRoute === '/Resume' ? <Article /> : <ArticleOutlined />} 
+                                    startIcon={currentRoute === '/resume' ? <Article /> : <ArticleOutlined />} 
                                     sx = {{
                                         color: 'text.primary',
-                                        fontWeight: currentRoute === '/Resume' ? 'bold' : 'normal',
+                                        fontWeight: currentRoute === '/resume' ? 'bold' : 'normal',
                                         "&:hover": {
                                             backgroundColor: 'iconColor.hover'
                                         }
@@ -201,9 +214,9 @@ const NavBar = (props) => {
                                 }
                             }}
                             size="small"
-                            onClick={props.handleClick}
+                            onClick={toggleDarkMode}
                         >
-                            {props.isDarkMode ? <LightMode /> : <DarkMode />}
+                            {isDarkMode ? <LightMode /> : <DarkMode />}
                         </IconButton> 
                     </Toolbar>
                 </Container>

@@ -1,43 +1,42 @@
-import { Typography, Box } from "@mui/material"
-import { Cabin } from '@next/font/google'
+import { Typography, Stack, Box } from "@mui/material"
+import { Teko } from "next/font/google"
 
-const cabin = Cabin({
+const teko = Teko({
     weight: '700',
     subsets: ['latin'],
 })
 
-const cabinBody = Cabin({
-    weight: '400',
-    subsets: ['latin'],
-})
-
-const Aboutme = () => {
+const Aboutme02 = () => {
     return (
-        <Box
+        <Stack
             id="aboutme-section"
+            spacing={0}
             sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                textAlign: 'left',
                 width: '100%',
                 py: 2,
                 px: 3,
             }}
         >
-            <Typography
-                variant="h5"
-                className={cabin.className}
+            <Box
                 sx={{
-                    m: 0,
-                    mb: 1,
-                    p: 0,
+                    display: 'flex',
                 }}
             >
-                About Me
-            </Typography> 
+                <Typography
+                    variant="h5"
+                    sx={{
+                        fontFamily: teko.style.fontFamily,
+                        borderBottom: '4px solid',
+                        m: 0,
+                        mb: 1,
+                        p: 0,
+                    }}
+                >
+                    About Me
+                </Typography> 
+            </Box>
             <Typography
                 variant="body1"
-                className={cabinBody.className}
             >
                 I’m a 1st generation Mexican American 
                 born and raised in South Central Los Angeles. I attended 
@@ -57,8 +56,8 @@ const Aboutme = () => {
                 Bachelor of Arts in Computer Science with a minor in 
                 Applied Mathematics. 
             </Typography>
-        </Box>
+        </Stack>
     )
 }
 
-export default Aboutme
+export default Aboutme02;

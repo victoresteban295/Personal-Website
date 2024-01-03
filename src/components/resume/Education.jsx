@@ -1,14 +1,9 @@
 import { AccountBalance, School } from "@mui/icons-material"
 import { Typography, Box, Avatar } from "@mui/material"
-import { Cabin, Inter } from '@next/font/google'
+import { Teko } from "next/font/google"
 
-const cabin = Cabin({
+const teko = Teko({
     weight: '700',
-    subsets: ['latin'],
-})
-
-const cabinBody = Cabin({
-    weight: '400',
     subsets: ['latin'],
 })
 
@@ -17,23 +12,35 @@ const Education = () => {
         <Box
             id="education-section"
             sx={{
+                borderRadius: '15px',
+                backgroundColor: 'secondary.main',
+                boxShadow: '1px 1px 10px #000',
                 display: 'flex',
                 flexDirection: 'column',
                 textAlign: 'left',
                 width: '100%',
-                py: 2,
+                py: 1,
                 px: 3,
             }}
         >
-            <Typography
-                variant="h5"
-                className={cabin.className}
+            <Box
                 sx={{
-                    my: 1,
+                    display: 'flex',
                 }}
             >
-                Education
-            </Typography> 
+                <Typography
+                    variant="h5"
+                    sx={{
+                        m: 0,
+                        mb: 1,
+                        p: 0,
+                        fontFamily: teko.style.fontFamily,
+                        borderBottom: '4px solid',
+                    }}
+                >
+                    Education
+                </Typography> 
+            </Box>
             <Box
                 id="albioncollege-section"
                 sx={{
@@ -65,7 +72,6 @@ const Education = () => {
                     >
                         <Typography
                             varitant='h5'
-                            className={cabin.className}
                             sx={{
                                 fontWeight: 'bold',
                                 my: 0,
@@ -76,7 +82,6 @@ const Education = () => {
                         </Typography> 
                         <Typography
                             varitant='body1'
-                            className={cabinBody.className}
                             sx={{
                                 my: 0,
                                 py: 0,
@@ -86,7 +91,6 @@ const Education = () => {
                         </Typography> 
                         <Typography
                             varitant='body1'
-                            className={cabinBody.className}
                             sx={{
                                 my: 0,
                                 py: 0,
@@ -96,7 +100,6 @@ const Education = () => {
                         </Typography> 
                         <Typography
                             varitant='body2'
-                            className={cabinBody.className}
                             sx={{
                                 my: 0,
                                 py: 0,
@@ -144,7 +147,6 @@ const Education = () => {
                     >
                         <Typography
                             varitant='h5'
-                            className={cabin.className}
                             sx={{
                                 fontWeight: 'bold',
                                 my: 0,
@@ -155,7 +157,6 @@ const Education = () => {
                         </Typography> 
                         <Typography
                             varitant='body1'
-                            className={cabinBody.className}
                             sx={{
                                 my: 0,
                                 py: 0,
@@ -165,7 +166,6 @@ const Education = () => {
                         </Typography> 
                         <Typography
                             varitant='body2'
-                            className={cabinBody.className}
                             sx={{
                                 my: 0,
                                 py: 0,

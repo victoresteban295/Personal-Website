@@ -1,13 +1,8 @@
 import { Typography, Box } from "@mui/material"
-import { Cabin } from '@next/font/google'
+import { Teko } from "next/font/google"
 
-const cabin = Cabin({
+const teko = Teko({
     weight: '700',
-    subsets: ['latin'],
-})
-
-const cabinBody = Cabin({
-    weight: '400',
     subsets: ['latin'],
 })
 
@@ -16,28 +11,37 @@ const Summary = () => {
         <Box
             id="summary-section"
             sx={{
+                borderRadius: '15px',
+                backgroundColor: 'secondary.main',
+                boxShadow: '1px 1px 10px #000',
                 display: 'flex',
                 flexDirection: 'column',
                 textAlign: 'left',
                 width: '100%',
-                py: 2,
+                py: 1,
                 px: 3,
             }}
         >
-            <Typography
-                variant="h5"
-                className={cabin.className}
+            <Box
                 sx={{
-                    m: 0,
-                    mb: 1,
-                    p: 0,
+                    display: 'flex',
                 }}
             >
-                Summary
-            </Typography> 
+                <Typography
+                    variant="h5"
+                    sx={{
+                        fontFamily: teko.style.fontFamily,
+                        m: 0,
+                        mb: 1,
+                        p: 0,
+                        borderBottom: '4px solid',
+                    }}
+                >
+                    Summary
+                </Typography> 
+            </Box>
             <Typography
                 variant="body1"
-                className={cabinBody.className}
             >
                 Enthusiastic software engineer devoted to developing new
                 software technologies that will improve the function of your 

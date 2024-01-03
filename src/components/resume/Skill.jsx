@@ -1,13 +1,8 @@
 import { Typography, Box, List, ListItem } from "@mui/material"
-import { Cabin } from '@next/font/google'
+import { Teko } from "next/font/google"
 
-const cabin = Cabin({
+const teko = Teko({
     weight: '700',
-    subsets: ['latin'],
-})
-
-const cabinBody = Cabin({
-    weight: '400',
     subsets: ['latin'],
 })
 
@@ -16,23 +11,33 @@ const Skill = () => {
         <Box
             id="skills-section"
             sx={{
+                borderRadius: '15px',
+                backgroundColor: 'secondary.main',
+                boxShadow: '1px 1px 10px #000',
                 display: 'flex',
                 flexDirection: 'column',
                 textAlign: 'left',
                 width: '100%',
-                py: 2,
+                py: 1,
                 px: 3,
             }}
         >
-            <Typography
-                variant="h5"
-                className={cabin.className}
+            <Box
                 sx={{
-                    my: 1,
+                    display: 'flex',
                 }}
             >
-                Skills
-            </Typography> 
+                <Typography
+                    variant="h5"
+                    sx={{
+                        fontFamily: teko.style.fontFamily,
+                        borderBottom: '4px solid',
+                        my: 1,
+                    }}
+                >
+                    Skills
+                </Typography> 
+            </Box>
             <Box
                 id="programming-subsection"
                 sx={{
@@ -43,7 +48,6 @@ const Skill = () => {
             >
                 <Typography
                     varitant='h5'
-                    className={cabin.className}
                     sx={{
                         fontWeight: 'bold',
                         my: 0,
@@ -76,7 +80,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1' className={cabinBody.className}>
+                                <Typography variant='body1' >
                                     Java
                                 </Typography>
                             </ListItem>                 
@@ -86,7 +90,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1' className={cabinBody.className}>
+                                <Typography variant='body1' >
                                     Javascript
                                 </Typography>
                             </ListItem>                 
@@ -96,7 +100,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1' className={cabinBody.className}>
+                                <Typography variant='body1' >
                                     CSS & HTML
                                 </Typography>
                             </ListItem>                 
@@ -106,7 +110,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1' className={cabinBody.className}>
+                                <Typography variant='body1' >
                                     React
                                 </Typography>
                             </ListItem>                 
@@ -128,7 +132,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1' className={cabinBody.className}>
+                                <Typography variant='body1' >
                                     NextJS
                                 </Typography>
                             </ListItem>                 
@@ -138,7 +142,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1' className={cabinBody.className}>
+                                <Typography variant='body1' >
                                     Spring
                                 </Typography>
                             </ListItem>                 
@@ -148,7 +152,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1' className={cabinBody.className}>
+                                <Typography variant='body1' >
                                     Spring Boot
                                 </Typography>
                             </ListItem>                 
@@ -158,7 +162,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1' className={cabinBody.className}>
+                                <Typography variant='body1' >
                                     Spring Data
                                 </Typography>
                             </ListItem>                 
@@ -180,7 +184,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1' className={cabinBody.className}>
+                                <Typography variant='body1' >
                                     Spring Security
                                 </Typography>
                             </ListItem>                 
@@ -190,7 +194,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1' className={cabinBody.className}>
+                                <Typography variant='body1' >
                                     Apache Cassandra
                                 </Typography>
                             </ListItem>                 
@@ -208,7 +212,6 @@ const Skill = () => {
             >
                 <Typography
                     varitant='h5'
-                    className={cabin.className}
                     sx={{
                         fontWeight: 'bold',
                         my: 0,
@@ -241,7 +244,7 @@ const Skill = () => {
                                     p: 0,
                                 }}
                             >
-                                <Typography variant='body1' className={cabinBody.className}>
+                                <Typography variant='body1' >
                                     Bilingual - Fluent in Spanish & English
                                 </Typography>
                             </ListItem>                 
