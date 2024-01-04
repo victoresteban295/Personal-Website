@@ -61,10 +61,8 @@ export default function ThemeRegistry(props) {
 
     return (
         <CacheProvider value={cache}>
-            <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
                 <CssBaseline />
                 {children}
-            </ThemeProvider>
         </CacheProvider>
     );
 }

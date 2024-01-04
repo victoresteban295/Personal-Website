@@ -18,7 +18,7 @@ const Social = () => {
                 textAlign: 'left',
                 alignSelf: 'flex-start',
                 width: '100%',
-                py: 2,
+                py: 1,
                 px: 3,
             }}
         >

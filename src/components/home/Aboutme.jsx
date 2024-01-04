@@ -12,8 +12,9 @@ const Aboutme = () => {
             id="aboutme-section"
             spacing={0}
             sx={{
+                color: 'text.primary',
                 width: '100%',
-                py: 2,
+                py: 1,
                 px: 3,
             }}
         >

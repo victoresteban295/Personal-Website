@@ -4,10 +4,10 @@ import { AppBar, Toolbar, Container, Box, Button, IconButton, Menu, MenuItem} fr
 import {HomeOutlined, IntegrationInstructionsOutlined, ArticleOutlined} from '@mui/icons-material'
 import {Home, IntegrationInstructions, Article, DarkMode, LightMode} from '@mui/icons-material'
 import MenuIcon from '@mui/icons-material/Menu'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 
-const NavBar = () => {
+const NavBar = ({ isDarkMode, toggleDarkMode }) => {
 
     /* Use to Determine Active Page For Navigation */
     const currentRoute = usePathname();
@@ -22,27 +22,8 @@ const NavBar = () => {
         setAnchorEl(null); // Menu has no HTML Element to attach to
     };
 
-    const [isDarkMode, setDarkMode] = useState(true);
-    useEffect(() => {
-        let theme = localStorage.getItem("theme");
-        if(theme === "light") {
-            setDarkMode(false);
-        }
-    }, []);
-
-    /* Change DarkMode */
-    const toggleDarkMode = () => {
-        if(isDarkMode) {
-            localStorage.setItem("theme", "light");         
-            setDarkMode(false);
-        } else {
-            localStorage.setItem("theme", "dark");         
-            setDarkMode(true);
-        }
-    }
-
     return (
-        <Box sx={{ flexGrow: 1, position: 'sticky', top: '0px', zIndex: '999' }}>
+        <Box sx={{position: 'sticky', top: '0px', zIndex: '999' }}>
             <AppBar position='sticky' >
                 <Container maxWidth='xl'>
                     <Toolbar disableGutters>
@@ -210,7 +191,7 @@ const NavBar = () => {
                                 color: 'darkMode.icon',
                                 backgroundColor: 'darkMode.background',
                                 "&:hover": {
-                                    color: 'darkMode.hover'
+                                    bgcolor: 'darkMode.hover'
                                 }
                             }}
                             size="small"

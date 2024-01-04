@@ -26,9 +26,9 @@ let darkTheme = createTheme({
             hover: '#403d39'
         },
         darkMode: {
-            icon: '#252422',
-            background: '#fffcf2',
-            hover: '#ffff00'
+            icon: '#ffff00',
+            background: '#46b1c9',
+            hover: '#46b1c9'
         }
     },
     typography: {
