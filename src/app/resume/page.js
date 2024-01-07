@@ -1,9 +1,9 @@
 "use client"
-import Education from "@/src/components/resume/Education"
 import Skill from "@/src/components/resume/Skill"
 import Summary from "@/src/components/resume/Summary"
 import Volunteer from "@/src/components/resume/Volunteer"
-import { Box, Grow, Stack, Typography } from "@mui/material"
+import Work from "@/src/components/resume/Work"
+import { Box, Divider, Grow, Stack, Typography } from "@mui/material"
 import { usePathname } from "next/navigation"
 
 const ResumePage = () => {
@@ -25,18 +25,27 @@ const ResumePage = () => {
                         m: 2,
                     }}
                 >
-                    <Typography
-                        variant='h5'
+                        <Typography
+                            variant='h5'
+                            sx={{
+                                fontWeight: '700',
+                            }}
+                        >
+                            Resume
+                        </Typography>
+                    <Stack
+                        spacing={2}
                         sx={{
-                            fontWeight: '700',
+                            borderRadius: '15px',
+                            backgroundColor: 'secondary.main',
+                            boxShadow: '1px 1px 10px #000',
                         }}
                     >
-                        Resume
-                    </Typography>
-                    <Summary /> 
-                    <Education />
-                    <Volunteer />
-                    <Skill />
+                        <Summary /> 
+                        <Work />
+                        <Volunteer />
+                        <Skill />
+                    </Stack>
                 </Stack>
             </Box>
         </Grow>

@@ -12,9 +12,9 @@ const Education = () => {
         <Box
             id="education-section"
             sx={{
-                borderRadius: '15px',
-                backgroundColor: 'secondary.main',
-                boxShadow: '1px 1px 10px #000',
+                /* borderRadius: '15px', */
+                /* backgroundColor: 'secondary.main', */
+                /* boxShadow: '1px 1px 10px #000', */
                 display: 'flex',
                 flexDirection: 'column',
                 textAlign: 'left',

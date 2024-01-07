@@ -1,9 +1,10 @@
 "use client"
 import ProjectWidget from "@/src/components/projects/ProjectWidget"
+import projects from "@/src/lib/data/projects"
 import { Box, Grow, Stack, Typography } from "@mui/material"
 import { usePathname } from "next/navigation"
 
-const ProjectPage = () => {
+const ProjectsPage = () => {
     const pathname = usePathname();
     return (
         <Grow in={pathname === '/projects'}>
@@ -18,34 +19,43 @@ const ProjectPage = () => {
                     id="projects-page-section"
                     spacing={2}
                     sx={{
-                        maxWidth: '700px',
+                        maxWidth: '1000px',
                         m: 2,
                     }}
                 >
                     <Typography
                         variant='h5'
                         sx={{
-                            fontWeight: '700'
+                            fontWeight: '700',
                         }}
                     >
                         Projects
                     </Typography>
-                    <ProjectWidget 
-                        imgPath='/images/academicDashboard/checklistpage.png'
-                        title='Academic Dashboard: Frontend'
-                        info='A web application for academic institutions that improves how students interact with course-related work assigned by professors.'
-                        github=''
-                    />
-                    <ProjectWidget 
-                        imgPath='/images/academicDashboard/checklistpage.png'
-                        title='RESTful API'
-                        info='A REST API built using Spring Boot and Java to '
-                        github=''
-                    />
+                    <Stack
+                        direction={{ xs: 'column', md: 'row' }}
+                        spacing={{xs: 5, md: 10}} 
+                        sx={{
+                            width: '100%',
+                        }}
+                    >
+                        {projects.map(project => {
+                            const { route, thumbnail, thumbnailAlt, title, info } = project;
+                            return (
+                                <ProjectWidget 
+                                    key={route}
+                                    route={route}
+                                    thumbnail={thumbnail}
+                                    title={title}
+                                    info={info}
+                                    imgAlt={thumbnailAlt}
+                                />
+                            )
+                        })}
+                    </Stack>
                 </Stack>
             </Box>
         </Grow>
     )
 }
 
-export default ProjectPage;
+export default ProjectsPage;

@@ -17,10 +17,10 @@ const Introduction = () => {
                 width: '100%',
                 py: 1,
                 px: 3,
+                color: 'text.primary',
                 borderRadius: '15px',
                 backgroundColor: 'secondary.main',
                 boxShadow: '1px 1px 10px #000',
-                color: 'text.primary',
             }}
         >
             <Box

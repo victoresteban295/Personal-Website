@@ -11,9 +11,6 @@ const Summary = () => {
         <Box
             id="summary-section"
             sx={{
-                borderRadius: '15px',
-                backgroundColor: 'secondary.main',
-                boxShadow: '1px 1px 10px #000',
                 display: 'flex',
                 flexDirection: 'column',
                 textAlign: 'left',
@@ -43,12 +40,7 @@ const Summary = () => {
             <Typography
                 variant="body1"
             >
-                Enthusiastic software engineer devoted to developing new
-                software technologies that will improve the function of your 
-                company. Loves to work hands-on with any given assignment. 
-                Comfortable working independently or in a team. Experience in 
-                frontend and backend web development, UX design, and database 
-                management systems like MySQL and Apache Cassandra.
+                Enthusiastic software engineer devoted to developing new technologies that will improve the function of your company. Loves to work hands-on with any given assignment and is comfortable working independently or in a team. Fluent in writing code in Java and Javascript. Experience in developing full-stack applications using technologies like React, Nextjs, and Spring. Capable of deploying applications using Docker and storing data in a document database like MongoDB.
             </Typography>
         </Box>
     )

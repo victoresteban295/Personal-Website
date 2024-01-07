@@ -1,5 +1,5 @@
 "use client"
-import { Box, CircularProgress, ThemeProvider } from "@mui/material";
+import { Box, ThemeProvider } from "@mui/material";
 import NavBar from "../components/Navbar";
 import ThemeRegistry from "../theme/ThemeRegistry";
 import darkTheme from "../theme/DarkModeTheme";

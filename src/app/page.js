@@ -1,9 +1,8 @@
 "use client"
 import React from 'react'
-import { Box, Grow, Stack, Typography } from "@mui/material"
+import { Box, Grow, Stack } from "@mui/material"
 import Introduction from '../components/home/Introduction'
 import Aboutme from '../components/home/Aboutme'
-import Contact from '../components/home/Contact'
 import Social from '../components/home/Social'
 import { usePathname } from 'next/navigation'
 import Education from '../components/resume/Education'
@@ -28,8 +27,9 @@ const HomePage = () => {
                     }}
                 >
                     <Introduction />
-                    <Education />
                     <Aboutme />
+                    <Education />
+                    <Social />
                 </Stack>
             </Box>
         </Grow>

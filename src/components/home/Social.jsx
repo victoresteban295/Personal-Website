@@ -1,5 +1,5 @@
-import { Typography, Box, List, ListItem, ListItemAvatar, ListItemText, Avatar, Tooltip } from "@mui/material"
-import { GitHub, Instagram, LinkedIn } from '@mui/icons-material'
+import { Typography, Box, Avatar, Tooltip, Stack } from "@mui/material"
+import { GitHub, LinkedIn } from '@mui/icons-material'
 import Link from 'next/link'
 import { Teko } from "next/font/google"
 
@@ -40,106 +40,83 @@ const Social = () => {
                     Socials
                 </Typography> 
             </Box>
-            <List
+            <Stack
+                spacing={2}
                 sx={{
-                    m: 0,
-                    p: 0,
+                    mt: 1,
                 }}
             >
-                <ListItem>
-                    <Link
-                        href='https://www.linkedin.com/in/victor-esteban295'
-                        style={{textDecoration: 'none'}}
+                <Link
+                    href='https://www.linkedin.com/in/victor-esteban295'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                    style={{textDecoration: 'none'}}
+                >
+                    <Stack
+                        direction='row'
+                        spacing={2}
                     >
-                        <ListItemAvatar>
-                            <Tooltip
-                                title="LinkedIn"
-                                followCursor
+                        <Tooltip
+                            arrow
+                            placement="right"
+                            title="LinkedIn"
+                        >
+                            <Avatar
+                                sx={{
+                                    color: 'iconColor.icon',
+                                    backgroundColor: 'iconColor.background',
+                                }}
                             >
-                                <Avatar
-                                    sx={{
-                                        color: 'iconColor.icon',
-                                        backgroundColor: 'iconColor.background',
-                                    }}
-                                >
-                                    <LinkedIn />
-                                </Avatar>
-                            </Tooltip>
-                        </ListItemAvatar>
-                    </Link>
-                    <ListItemText 
-                        primary= {
-                            <Typography
-                                variant='h6'
-                            >
-                                @victor-esteban295
-                            </Typography>
-                        }
-                    />
-                </ListItem>
-                <ListItem>
-                    <Link
-                        href='https://www.github.com/victoresteban295'
-                        style={{textDecoration: 'none'}}
+                                <LinkedIn />
+                            </Avatar>
+                        </Tooltip>
+                        <Typography
+                            variant='h6'
+                            sx={{
+                                color: 'text.primary',
+                                fontWeight: '700',
+                            }}
+                        >
+                            @victor-esteban295
+                        </Typography>
+                    </Stack>
+                </Link>
+                <Link
+                    href='https://www.github.com/victoresteban295'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                    style={{textDecoration: 'none'}}
+                >
+                    <Stack
+                        direction='row'
+                        spacing={2}
                     >
-                        <ListItemAvatar>
-                            <Tooltip
-                                title="GitHub"
-                                followCursor
+                        <Tooltip
+                            arrow
+                            placement="right"
+                            title="GitHub"
+                        >
+                            <Avatar
+                                sx={{
+                                    color: 'iconColor.icon',
+                                    backgroundColor: 'iconColor.background',
+                                }}
                             >
-                                <Avatar
-                                    sx={{
-                                        color: 'iconColor.icon',
-                                        backgroundColor: 'iconColor.background',
-                                    }}
-                                >
-                                    <GitHub />
-                                </Avatar>
-                            </Tooltip>
-                        </ListItemAvatar>
-                    </Link>
-                    <ListItemText 
-                        primary= {
-                            <Typography
-                                variant='h6'
-                            >
-                               @victoresteban295
-                            </Typography>
-                        }
-                    />
-                </ListItem>
-                <ListItem>
-                    <Link
-                        href='https://www.instagram.com'
-                        style={{textDecoration: 'none'}}
-                    >
-                        <ListItemAvatar>
-                            <Tooltip
-                                title="Instagram"
-                                followCursor
-                            >
-                                <Avatar
-                                    sx={{
-                                        color: 'iconColor.icon',
-                                        backgroundColor: 'iconColor.background',
-                                    }}
-                                >
-                                    <Instagram />
-                                </Avatar>
-                            </Tooltip>
-                        </ListItemAvatar>
-                    </Link>
-                    <ListItemText 
-                        primary= {
-                            <Typography
-                                variant='h6'
-                            >
-                               @victor_m.esteban
-                            </Typography>
-                        }
-                    />
-                </ListItem>
-            </List>
+                                <GitHub />
+                            </Avatar>
+                        </Tooltip>
+                        <Typography
+                            variant='h6'
+                            sx={{
+                                color: 'text.primary',
+                                fontWeight: '700',
+                            }}
+                        >
+                           @victoresteban295
+                        </Typography>
+                    </Stack>
+                </Link>
+            </Stack>
         </Box>
     )
 }

@@ -6,10 +6,10 @@ const teko = Teko({
     subsets: ['latin'],
 })
 
-const Volunteer = () => {
+const Work = () => {
     return (
         <Box
-            id="volunteer-section"
+            id="work-section"
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -32,11 +32,11 @@ const Volunteer = () => {
                         my: 1,
                     }}
                 >
-                    Volunteer Experience
+                    Work Experience
                 </Typography> 
             </Box>
             <Box
-                id="volunteer01-subsection"
+                id="work01-subsection"
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -51,7 +51,7 @@ const Volunteer = () => {
                         py: 0,
                     }}
                 >
-                    Ambassador | Albion College Admission 
+                    Online Digital Shopper | Walmart 
                 </Typography> 
                 <Typography
                     varitant='body1'
@@ -60,7 +60,7 @@ const Volunteer = () => {
                         py: 0,
                     }}
                 >
-                    Jan 2017 - Mar 2018
+                    Sept 2022 - Jan 2023
                 </Typography> 
                 <List
                     sx={{
@@ -78,8 +78,7 @@ const Volunteer = () => {
                         <Typography
                             variant='body1'
                         >
-                            Chaperone prospective students, making sure they're on schedule 
-                            for their events.
+                            Prep customers' online orders by locating the items in the store.
                         </Typography>
                     </ListItem>                 
                     <ListItem
@@ -91,8 +90,7 @@ const Volunteer = () => {
                         <Typography
                             variant='body1'
                         >
-                            Responsible for providing them a glimpse into everyday life as
-                            an Albion College Student.
+                            Package and organize customers' orders to guarantee efficient distribution during pick up.
                         </Typography>
                     </ListItem>                 
                     <ListItem
@@ -104,56 +102,7 @@ const Volunteer = () => {
                         <Typography
                             variant='body1'
                         >
-                            Recommend students the appropriate resources needed to succeed 
-                            at Albion.
-                        </Typography>
-                    </ListItem>                 
-                </List>
-            </Box>
-            <Box
-                id="volunteer02-subsection"
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    mt: 1,
-                }}
-            >
-                <Typography
-                    varitant='h5'
-                    sx={{
-                        fontWeight: 'bold',
-                        my: 0,
-                        py: 0,
-                    }}
-                >
-                    Vice President | Engineering Club At Albion College 
-                </Typography> 
-                <Typography
-                    varitant='body1'
-                    sx={{
-                        my: 0,
-                        py: 0,
-                    }}
-                >
-                    Jan 2020 - May 2020
-                </Typography> 
-                <List
-                    sx={{
-                        listStyleType: 'disc',
-                        my: 0,
-                        pl: 4,
-                    }}
-                >
-                    <ListItem
-                        sx={{
-                            display: 'list-item',
-                            p: 0,
-                        }}
-                    >
-                        <Typography
-                            variant='body1'
-                        >
-                            Monitored student projects to ensure the lab's equipment was respected.
+                            Continuous routine checks to ensure quality and accuracy.
                         </Typography>
                     </ListItem>                 
                     <ListItem
@@ -165,7 +114,19 @@ const Volunteer = () => {
                         <Typography
                             variant='body1'
                         >
-                            Worked closely with the club’s president and treasury to process and approve student's requests for item purchases.
+                            Make appropriate product substitutions and communicate with customers to satisfy their needs.
+                        </Typography>
+                    </ListItem>                 
+                    <ListItem
+                        sx={{
+                            display: 'list-item',
+                            p: 0,
+                        }}
+                    >
+                        <Typography
+                            variant='body1'
+                        >
+                            Monitor checked-in customers and dispense their orders as they arrive.
                         </Typography>
                     </ListItem>                 
                 </List>
@@ -174,4 +135,4 @@ const Volunteer = () => {
     )
 }
 
-export default Volunteer
+export default Work;

@@ -11,9 +11,6 @@ const Skill = () => {
         <Box
             id="skills-section"
             sx={{
-                borderRadius: '15px',
-                backgroundColor: 'secondary.main',
-                boxShadow: '1px 1px 10px #000',
                 display: 'flex',
                 flexDirection: 'column',
                 textAlign: 'left',
@@ -143,16 +140,6 @@ const Skill = () => {
                                 }}
                             >
                                 <Typography variant='body1' >
-                                    Spring
-                                </Typography>
-                            </ListItem>                 
-                            <ListItem
-                                sx={{
-                                    display: 'list-item',
-                                    p: 0,
-                                }}
-                            >
-                                <Typography variant='body1' >
                                     Spring Boot
                                 </Typography>
                             </ListItem>                 
@@ -164,6 +151,16 @@ const Skill = () => {
                             >
                                 <Typography variant='body1' >
                                     Spring Data
+                                </Typography>
+                            </ListItem>                 
+                            <ListItem
+                                sx={{
+                                    display: 'list-item',
+                                    p: 0,
+                                }}
+                            >
+                                <Typography variant='body1' >
+                                    Spring Security
                                 </Typography>
                             </ListItem>                 
                         </List>
@@ -185,7 +182,7 @@ const Skill = () => {
                                 }}
                             >
                                 <Typography variant='body1' >
-                                    Spring Security
+                                    MongoDB
                                 </Typography>
                             </ListItem>                 
                             <ListItem
@@ -195,7 +192,7 @@ const Skill = () => {
                                 }}
                             >
                                 <Typography variant='body1' >
-                                    Apache Cassandra
+                                    Docker
                                 </Typography>
                             </ListItem>                 
                         </List>

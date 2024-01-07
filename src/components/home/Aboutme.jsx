@@ -36,87 +36,14 @@ const Aboutme = () => {
                     About Me
                 </Typography> 
             </Box>
-            <Stack
-                spacing={1}
+            <Typography
+                variant="body1"
                 sx={{
-                    pl: 2,
+                    fontWeight: 'bold',
                 }}
             >
-                <Stack
-                    direction='row'
-                    justifyContent="flex-start"
-                    alignItems="flex-start"
-                    spacing={2}
-                >
-                    <Typography
-                        variant="h5"
-                        sx={{
-                            fontWeight: '700',
-                            fontFamily: teko.style.fontFamily,
-                            p: 0,
-                        }}
-                    >
-                        1998
-                    </Typography>
-                    <Typography
-                        variant="h6"
-                        sx={{
-                            fontWeight: '400',
-                            p: 0,
-                        }}
-                    >
-                        Born Los Angeles, CA
-                    </Typography>
-                </Stack>
-                <Stack
-                    direction='row'
-                    justifyContent="flex-start"
-                    alignItems="flex-start"
-                    spacing={2}
-                >
-                    <Typography
-                        variant="h5"
-                        sx={{
-                            fontWeight: '700',
-                            fontFamily: teko.style.fontFamily,
-                        }}
-                    >
-                        2016
-                    </Typography>
-                    <Typography
-                        variant="h6"
-                        sx={{
-                            fontWeight: '400',
-                        }}
-                    >
-                        Earn High School Diploma from Animo Ralph Bunche HS 
-                    </Typography>
-                </Stack>
-                <Stack
-                    direction='row'
-                    justifyContent="flex-start"
-                    alignItems="flex-start"
-                    spacing={2}
-                >
-                    <Typography
-                        variant="h5"
-                        sx={{
-                            fontWeight: '700',
-                            fontFamily: teko.style.fontFamily,
-                        }}
-                    >
-                        2021
-                    </Typography>
-                    <Typography
-                        variant="h6"
-                        sx={{
-                            fontWeight: '400',
-                        }}
-                    >
-                        Earn Bachelor of Art in Computer Science with a Minor in Applied Mathematics from Albion College
-                    </Typography>
-                </Stack>
-            </Stack>
+                Victor is a full-stack developer based in Los Angeles passionate about learning new methods and technologies. He loves to challenge himself by developing applications that solve real-world problems. When not programming, he enjoys cycling around the city and traveling to new places.
+            </Typography>
         </Stack>
     )
 }
