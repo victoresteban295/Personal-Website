@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import { AppBar, Toolbar, Container, Box, Button, IconButton, Menu, MenuItem} from '@mui/material'
-import {HomeOutlined, IntegrationInstructionsOutlined, ArticleOutlined} from '@mui/icons-material'
+import {HomeOutlined, IntegrationInstructionsOutlined, ArticleOutlined, LightModeOutlined, DarkModeOutlined} from '@mui/icons-material'
 import {Home, IntegrationInstructions, Article, DarkMode, LightMode} from '@mui/icons-material'
 import MenuIcon from '@mui/icons-material/Menu'
 import { useState } from 'react'
@@ -39,13 +39,17 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
                             <IconButton 
                                 onClick={handleClick}
                                 sx={{
-                                    color: 'text.primary',
+                                    borderRadius: '15px',
+                                    borderStyle: 'solid',
+                                    borderWidth: '2px',
+                                    borderColor: 'darkMode.background',
+                                    color: 'darkMode.icon',
                                     "&:hover": {
                                         backgroundColor: 'iconColor.hover'
                                     }
                                 }}
                             >
-                                <MenuIcon fontSize='large' />
+                                <MenuIcon />
                             </IconButton>    
                             <Menu 
                                 id="hamburger-menu"
@@ -186,10 +190,18 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
                             </Link>
                         </Box> 
 
-                        <IconButton 
+                        <Box
                             sx={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                p: 1,
+                                borderRadius: '15px',
+                                borderStyle: 'solid',
+                                borderWidth: '2px',
+                                borderColor: 'darkMode.background',
                                 color: 'darkMode.icon',
-                                backgroundColor: 'darkMode.background',
+                                cursor: 'pointer',
                                 "&:hover": {
                                     bgcolor: 'darkMode.hover'
                                 }
@@ -197,8 +209,8 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
                             size="small"
                             onClick={toggleDarkMode}
                         >
-                            {isDarkMode ? <LightMode /> : <DarkMode />}
-                        </IconButton> 
+                            {isDarkMode ? <LightModeOutlined /> : <DarkModeOutlined />}
+                        </Box> 
                     </Toolbar>
                 </Container>
             </AppBar>

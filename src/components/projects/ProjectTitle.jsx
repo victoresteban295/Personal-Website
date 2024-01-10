@@ -2,7 +2,6 @@ import { Stack, Typography } from "@mui/material";
 import Link from "next/link";
 
 const ProjectTitle = ({ title }) => {
-
     return (
         <Stack
             direction='row'

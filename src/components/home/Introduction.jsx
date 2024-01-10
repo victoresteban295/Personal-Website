@@ -31,7 +31,6 @@ const Introduction = () => {
                 <Typography 
                     variant='h3' 
                     sx={{
-                        fontFamily: teko.style.fontFamily
                     }}
                 >
                     Victor Manuel Esteban
@@ -39,8 +38,8 @@ const Introduction = () => {
                 <Typography
                     variant='h6'
                     sx={{
+                        fontWeight: 'bold',
                         color: '#eb5e28',
-                        fontFamily: teko.style.fontFamily
                     }}
                 >
                     Full Stack Developer 

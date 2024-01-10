@@ -22,14 +22,14 @@ let lightTheme = createTheme({
             primary: '#252422'
         },
         iconColor: {
-            icon: '#ccc5b9',
-            background: '#403d39',
+            icon: '#252422',
+            background: '#fffcf2',
             hover: '#ccc5b9'
         },
         darkMode: {
-            icon: '#b8b8b8',
-            background: '#005377',
-            hover: '#005377',
+            icon: '#252422',
+            background: '#252422',
+            hover: '#ccc5b9',
         }
     },
     typography: {

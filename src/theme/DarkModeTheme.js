@@ -8,7 +8,7 @@ const cabin = Cabin({
 let darkTheme = createTheme({
     palette: {
         primary: {
-            main: '#252422'
+            main: '#393d3f'
         },
         secondary: {
             main: '#403d39',
@@ -21,14 +21,14 @@ let darkTheme = createTheme({
             primary: '#fffcf2'
         },
         iconColor: {
-            icon: '#403d39',
-            background: '#ccc5b9',
+            icon: '#fffcf2',
+            background: '#393d3f',
             hover: '#403d39'
         },
         darkMode: {
-            icon: '#ffff00',
-            background: '#46b1c9',
-            hover: '#46b1c9'
+            icon: '#fffcf2',
+            background: '#fffcf2',
+            hover: '#403d39'
         }
     },
     typography: {

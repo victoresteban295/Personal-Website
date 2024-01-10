@@ -8,15 +8,15 @@ import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 
 const RootLayout = ({ children }) => {
-    const [isDarkMode, setDarkMode] = useState(true);
+    const [isDarkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
         let theme = localStorage.getItem("theme");
-        if(theme === "light") {
-            setDarkMode(false);
-        } else {
+        if(theme === "dark") {
             setDarkMode(true);
-            localStorage.setItem("theme", "dark");         
+        } else {
+            setDarkMode(false);
+            localStorage.setItem("theme", "light");         
         }
     }, []);
 

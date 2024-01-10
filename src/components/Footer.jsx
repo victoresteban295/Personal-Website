@@ -9,7 +9,13 @@ const Footer = () => {
                 mb: 2,
             }}
         >
-            <Typography align="center" variant="subtitle1">
+            <Typography 
+                align="center" 
+                variant="subtitle1"
+                sx={{
+                    fontWeight: 'bold',
+                }}
+            >
                 © {currentYear} Victor Esteban. All Right Reserved 
             </Typography>
         </Box>

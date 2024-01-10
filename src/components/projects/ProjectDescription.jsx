@@ -9,6 +9,9 @@ const ProjectDescription = ({ description }) => {
         >
             <Typography
                 variant='body1'
+                sx={{
+                    fontWeight: 'bold',
+                }}
             >
                 {description}
             </Typography>

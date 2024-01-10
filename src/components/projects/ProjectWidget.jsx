@@ -55,7 +55,7 @@ const ProjectWidget = ({ route, thumbnail, title, info, imgAlt }) => {
                         variant='h6' 
                         align='center'
                         sx={{
-                            fontFamily: teko.style.fontFamily,
+                            fontWeight: 'bold',
                             color: 'text.primary',
                         }}
                     >
