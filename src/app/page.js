@@ -1,7 +1,5 @@
 "use client"
-import ProjectWidget from "@/src/components/projects/ProjectWidget"
-import projects from "@/src/lib/data/projects"
-import { Box, Stack, ThemeProvider, Typography } from "@mui/material"
+import { Box, ThemeProvider } from "@mui/material"
 import HomeSection from "../components/home/HomeSection"
 import NavBar from "../components/Navbar";
 import darkTheme from "../theme/DarkModeTheme";
@@ -13,7 +11,11 @@ import ResumeSection from "../components/resume/ResumeSection"
 import { useInView } from "react-intersection-observer"
 
 const HomePage = () => {
-    const { ref: homeRef, inView, entry } = useInView();
+
+    const { ref: homeRef, inView: isHomeVisible } = useInView();
+    const { ref: projectsRef, inView: isProjectsVisible } = useInView();
+    const { ref: resumeRef, inView: isResumeVisible } = useInView();
+
     const [isDarkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
@@ -56,23 +58,29 @@ const HomePage = () => {
                 <NavBar 
                     isDarkMode={isDarkMode}
                     toggleDarkMode={toggleDarkMode}
+                    isHomeVisible={isHomeVisible}
+                    isProjectsVisible={isProjectsVisible}
+                    isResumeVisible={isResumeVisible}
                 />
                 <Box
                     id="home"
-                    ref={homeRef}
                     sx={{
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
                         width: '100%',
-                        mt: '64px',
                     }}
                 >
                     <HomeSection 
                         isDarkMode={isDarkMode}
+                        homeRef={homeRef}
                     />
-                    <ProjectsSection />
-                    <ResumeSection />
+                    <ProjectsSection 
+                        projectsRef={projectsRef}
+                    />
+                    <ResumeSection 
+                        resumeRef={resumeRef}
+                    />
                     <Footer />
                 </Box>
 

@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { LowPriority } from "@mui/icons-material"
-import { Box, Typography, Button } from "@mui/material"
+import { ArrowBack, ErrorOutline } from "@mui/icons-material"
+import { Box, Typography, Button, Stack } from "@mui/material"
 
 const NotFound = () => {
     return (
@@ -11,68 +11,84 @@ const NotFound = () => {
                     sx={{
                         display: 'flex',
                         justifyContent: 'center',
+                        bgcolor: 'primary.main',
+                        height: '100vh',
+                        pt: 30,
+                        pt: {xs: 10, sm: 10, md: 30},
                     }}
                 >
                     <Box
-                        id="not-found-page-section"
                         sx={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            flexDirection: 'column',
                             maxWidth: '700px',
-                            mx: 1,
                         }}
                     >
-                        <Box
-                            id="summary-section"
+                        <Stack
+                            spacing={2}
+                            alignItems={'center'}
                             sx={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                textAlign: 'left',
-                                width: '100%',
+                                maxWidth: '700px',
+                                borderStyle: 'solid',
+                                borderWidth: '2px',
+                                borderColor: 'iconColor.icon',
                                 borderRadius: '15px',
-                                backgroundColor: 'secondary.main',
-                                alignItems: 'center',
-                                justifyContent: 'space-between',
-                                mt: 1.5,
-                                py: 2,
-                                px: 3,
+                                mx: 5,
+                                p: 5,
                             }}
                         >
-                            <Typography
-                                variant="h6"
+                            <Box
                                 sx={{
-                                    m: 0,
-                                    mb: 1,
-                                    p: 0,
+                                    weight: '100px',
+                                    height: '100px',
+                                }}
+                            >
+                                <ErrorOutline 
+                                    fontSize="large" 
+                                    sx={{
+                                        color: 'text.primary',
+                                        width: '100%', 
+                                        height: '100%'
+                                    }} 
+                                />
+                            </Box>
+                            <Typography
+                                variant="h4"
+                                align="center"
+                                sx={{
+                                    fontWeight: 'bold',
+                                    color: 'text.primary',
                                 }}
                             >
                                 404 - Page Not Found
                             </Typography> 
                             <Typography
                                 variant="body1"
+                                align="center"
+                                sx={{
+                                    fontWeight: 'bold',
+                                    color: 'text.primary',
+                                }}
                             >
                                 The page you are looking for does not exist
                             </Typography>
-                                <Link href='/' style={{textDecoration: 'none'}}>
-                                    <Button 
-                                        variant='contained' 
-                                        startIcon={<LowPriority />}
-                                        sx = {{
-                                            color: 'text.primary',
-                                            backgroundColor: '#eb5e28',
-                                            fontWeight: 'bold',
-                                            my: 2,
-                                            "&:hover": {
-                                                backgroundColor: '#403d39'
-                                            }
-                                        }}
-                                    >
-                                        Return To Home Page
-                                    </Button>
-                                </Link>
-                        </Box> 
+                            <Link href='/' style={{textDecoration: 'none'}}>
+                                <Button 
+                                    startIcon={<ArrowBack />}
+                                    sx = {{
+                                        color: 'iconColor.icon',
+                                        backgroundColor: 'iconColor.background',
+                                        borderStyle: 'solid',
+                                        borderWidth: '2px',
+                                        borderColor: 'iconColor.icon',
+                                        fontWeight: 'bold',
+                                        "&:hover": {
+                                            backgroundColor: 'iconColor.hover'
+                                        }
+                                    }}
+                                >
+                                    Go Back
+                                </Button>
+                            </Link>
+                        </Stack>
                     </Box>
                 </Box>
             </body>

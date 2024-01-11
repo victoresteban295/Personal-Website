@@ -2,15 +2,13 @@
 import Link from 'next/link'
 import { AppBar, Toolbar, Container, Box, Button, IconButton, Menu, MenuItem} from '@mui/material'
 import {HomeOutlined, IntegrationInstructionsOutlined, ArticleOutlined, LightModeOutlined, DarkModeOutlined} from '@mui/icons-material'
-import {Home, IntegrationInstructions, Article, DarkMode, LightMode} from '@mui/icons-material'
+import {Home, IntegrationInstructions, Article } from '@mui/icons-material'
 import MenuIcon from '@mui/icons-material/Menu'
 import { useState } from 'react'
-import { usePathname } from 'next/navigation'
 
-const NavBar = ({ isDarkMode, toggleDarkMode }) => {
+const NavBar = ({ isDarkMode, toggleDarkMode, isHomeVisible, isProjectsVisible, isResumeVisible }) => {
 
     /* Use to Determine Active Page For Navigation */
-    const currentRoute = usePathname();
 
     /* Hamburger Menu Config */
     const [anchorEl, setAnchorEl] = useState(null); // State: Determine HTML Element that Menu will Attach To
@@ -23,7 +21,7 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
     };
 
     return (
-        <Box sx={{position: 'fixed', top: '0px', zIndex: '999' }}>
+        <Box sx={{position: 'fixed', top: '0px', zIndex: '999', }}>
             <AppBar position='fixed' >
                 <Container maxWidth='xl'>
                     <Toolbar disableGutters>
@@ -45,7 +43,7 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
                                     borderColor: 'darkMode.background',
                                     color: 'darkMode.icon',
                                     "&:hover": {
-                                        backgroundColor: 'iconColor.hover'
+                                        backgroundColor: 'primary.main'
                                     }
                                 }}
                             >
@@ -72,12 +70,12 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
                                     <Link href='#home' style={{textDecoration: 'none'}}>
                                         <Button 
                                             variant='text' 
-                                            startIcon={currentRoute === '/' ? <Home /> : <HomeOutlined />}
+                                            startIcon={isHomeVisible === true ? <Home /> : <HomeOutlined />}
                                             sx = {{
                                                 color: 'text.primary',
-                                                fontWeight: currentRoute === '/' ? 'bold' : 'normal',
+                                                fontWeight: isHomeVisible ? 'bold' : 'normal',
                                                 "&:hover": {
-                                                    backgroundColor: 'iconColor.hover'
+                                                    backgroundColor: 'primary.main',
                                                 }
                                             }}
                                         >
@@ -93,12 +91,12 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
                                     <Link href='#projects' style={{textDecoration: 'none'}}>
                                         <Button 
                                             variant='text' 
-                                            startIcon={currentRoute === '/projects' ? <IntegrationInstructions /> : <IntegrationInstructionsOutlined />} 
+                                            startIcon={(!isHomeVisible && isProjectsVisible) ? <IntegrationInstructions /> : <IntegrationInstructionsOutlined />} 
                                             sx = {{
                                                 color: 'text.primary',
-                                                fontWeight: currentRoute === '/projects' ? 'bold' : 'normal',
+                                                fontWeight: (!isHomeVisible && isProjectsVisible) ? 'bold' : 'normal',
                                                 "&:hover": {
-                                                    backgroundColor: 'iconColor.hover'
+                                                    backgroundColor: 'primary.main',
                                                 }
                                             }}
                                         >
@@ -114,12 +112,12 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
                                     <Link href='#resume' style={{textDecoration: 'none'}}>
                                         <Button 
                                             variant='text' 
-                                            startIcon={currentRoute === '/resume' ? <Article /> : <ArticleOutlined />} 
+                                            startIcon={(!isProjectsVisible && isResumeVisible) ? <Article /> : <ArticleOutlined />} 
                                             sx = {{
                                                 color: 'text.primary',
-                                                fontWeight: currentRoute === '/resume' ? 'bold' : 'normal',
+                                                fontWeight: (!isProjectsVisible && isResumeVisible) ? 'bold' : 'normal',
                                                 "&:hover": {
-                                                    backgroundColor: 'iconColor.hover'
+                                                    backgroundColor: 'primary.main',
                                                 }
                                             }}
                                         >
@@ -142,12 +140,12 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
                             <Link href='#home' style={{textDecoration: 'none'}}>
                                 <Button 
                                     variant='text' 
-                                    startIcon={currentRoute === '/' ? <Home /> : <HomeOutlined />}
+                                    startIcon={isHomeVisible === true ? <Home /> : <HomeOutlined />}
                                     sx = {{
                                         color: 'text.primary',
-                                        fontWeight: currentRoute === '/' ? 'bold' : 'normal',
+                                        fontWeight: isHomeVisible ? 'bold' : 'normal',
                                         "&:hover": {
-                                            backgroundColor: 'iconColor.hover'
+                                            backgroundColor: 'primary.main',
                                         }
                                     }}
                                 >
@@ -159,12 +157,12 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
                             <Link href='#projects' style={{textDecoration: 'none'}}>
                                 <Button 
                                     variant='text' 
-                                    startIcon={currentRoute === '/projects' ? <IntegrationInstructions /> : <IntegrationInstructionsOutlined />} 
+                                    startIcon={(!isHomeVisible && isProjectsVisible) ? <IntegrationInstructions /> : <IntegrationInstructionsOutlined />} 
                                     sx = {{
                                         color: 'text.primary',
-                                        fontWeight: currentRoute === '/projects' ? 'bold' : 'normal',
+                                        fontWeight: (!isHomeVisible && isProjectsVisible) ? 'bold' : 'normal',
                                         "&:hover": {
-                                            backgroundColor: 'iconColor.hover'
+                                            backgroundColor: 'primary.main',
                                         }
                                     }}
                                 >
@@ -176,12 +174,12 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
                             <Link href='#resume' style={{textDecoration: 'none'}}>
                                 <Button 
                                     variant='text' 
-                                    startIcon={currentRoute === '/resume' ? <Article /> : <ArticleOutlined />} 
+                                    startIcon={(!isProjectsVisible && isResumeVisible) ? <Article /> : <ArticleOutlined />} 
                                     sx = {{
                                         color: 'text.primary',
-                                        fontWeight: currentRoute === '/resume' ? 'bold' : 'normal',
+                                        fontWeight: (!isProjectsVisible && isResumeVisible) ? 'bold' : 'normal',
                                         "&:hover": {
-                                            backgroundColor: 'iconColor.hover'
+                                            backgroundColor: 'primary.main',
                                         }
                                     }}
                                 >

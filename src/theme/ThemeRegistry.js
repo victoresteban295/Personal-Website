@@ -9,11 +9,14 @@ import darkTheme from './DarkModeTheme';
 import lightTheme from './LightModeTheme';
 
 export default function ThemeRegistry(props) {
-    const [isDarkMode, setDarkMode] = useState(true);
+    const [isDarkMode, setDarkMode] = useState(false);
     useEffect(() => {
         let theme = localStorage.getItem("theme");
-        if(theme === "light") {
+        if(theme === "dark") {
+            setDarkMode(true);
+        } else {
             setDarkMode(false);
+            localStorage.setItem("theme", "light");         
         }
     }, []);
 
@@ -61,8 +64,10 @@ export default function ThemeRegistry(props) {
 
     return (
         <CacheProvider value={cache}>
+            <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
                 <CssBaseline />
                 {children}
+            </ThemeProvider>
         </CacheProvider>
     );
 }

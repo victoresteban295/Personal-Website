@@ -5,15 +5,16 @@ import Volunteer from "./Volunteer";
 import Skill from "./Skill";
 import Education from "./Education";
 
-const ResumeSection = () => {
+const ResumeSection = ({ resumeRef }) => {
     return (
         <Stack
             id="resume"
+            ref={resumeRef}
             spacing={2}
             sx={{
                 maxWidth: '700px',
                 mx: 2,
-                py: 5,
+                py: '70px',
             }}
         >
                 <Typography

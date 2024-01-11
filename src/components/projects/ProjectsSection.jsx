@@ -2,7 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import ProjectWidget from "./ProjectWidget";
 import projects from "@/src/lib/data/projects";
 
-const ProjectsSection = () => {
+const ProjectsSection = ({ projectsRef }) => {
     return (
         <Box
             id='projects'
@@ -11,7 +11,7 @@ const ProjectsSection = () => {
                 justifyContent: 'center',
                 bgcolor: 'secondary.main',
                 width: '100%',
-                py: 5,
+                py: '70px',
                 px: 2,
             }}
         >
@@ -27,6 +27,7 @@ const ProjectsSection = () => {
                     Projects
                 </Typography>
                 <Stack
+                    ref={projectsRef}
                     direction={{ xs: 'column', md: 'row' }}
                     spacing={{xs: 5, sm: 10, md: 30}} 
                     sx={{
