@@ -1,73 +1,83 @@
 "use client"
-import { Box, Grow, Stack, SvgIcon } from "@mui/material"
-import Introduction from '../components/home/Introduction'
-import Aboutme from '../components/home/Aboutme'
-import Social from '../components/home/Social'
-import { usePathname } from 'next/navigation'
-import Education from '../components/resume/Education'
-import Introduction02 from '../components/home/Introduction02'
-import Image from 'next/image'
+import ProjectWidget from "@/src/components/projects/ProjectWidget"
+import projects from "@/src/lib/data/projects"
+import { Box, Stack, ThemeProvider, Typography } from "@mui/material"
+import HomeSection from "../components/home/HomeSection"
+import NavBar from "../components/Navbar";
+import darkTheme from "../theme/DarkModeTheme";
+import lightTheme from "../theme/LightModeTheme";
+import { useEffect, useState } from "react";
+import Footer from "../components/Footer";
+import ProjectsSection from "../components/projects/ProjectsSection"
+import ResumeSection from "../components/resume/ResumeSection"
+import { useInView } from "react-intersection-observer"
 
 const HomePage = () => {
-    const pathname = usePathname();
+    const { ref: homeRef, inView, entry } = useInView();
+    const [isDarkMode, setDarkMode] = useState(false);
+
+    useEffect(() => {
+        let theme = localStorage.getItem("theme");
+        if(theme === "dark") {
+            setDarkMode(true);
+        } else {
+            setDarkMode(false);
+            localStorage.setItem("theme", "light");         
+        }
+    }, []);
+
+    /* Change DarkMode */
+    const toggleDarkMode = () => {
+        setDarkMode(prevMode => {
+            //Save Theme on LocalStorage
+            if(!prevMode) {
+                localStorage.setItem("theme", "dark");         
+            } else {
+                localStorage.setItem("theme", "light");         
+            }
+
+            return !prevMode;
+        })
+    }
 
     return (
-        <Grow in={pathname === ('/')}>
+        <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
             <Box
-                id="page-section"
+                id="page"
                 sx={{
                     display: 'flex',
-                    justifyContent: 'center',
+                    flexDirection: 'column',
+                    backgroundColor: 'primary.main',
+                    color: 'text.primary',
+                    overflowY: 'auto',
+                    flexGrow: 1,
                 }}
             >
-                <Stack
-                    id = "home-page-section"
-                    spacing={4}
-                    direction={{xs: 'column-reverse', sm: 'column-reverse', md: 'row'}}
+                <NavBar 
+                    isDarkMode={isDarkMode}
+                    toggleDarkMode={toggleDarkMode}
+                />
+                <Box
+                    id="home"
+                    ref={homeRef}
                     sx={{
-                        my: { xs: 2, sm: 5, md: 10 },
-                        mx: 5,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        width: '100%',
+                        mt: '64px',
                     }}
                 >
-                    <Introduction02 />
-                    <Box
-                        sx={{
-                            maxWidth: '500px',
-                            maxHeight: '500px',
-                            display: {xs: 'none', sm: 'none', md: 'block'},
-                        }}
-                    >
-                        <Image 
-                            src={'images/BlackLaptop.svg'}
-                            alt={"Laptop"} 
-                            height={500}
-                            width={500}
-                            style={{
-                                maxWidth: '100%',
-                            }}
-                        />
-                    </Box>
-                    <Box
-                        sx={{
-                            maxWidth: '250px',
-                            maxHeight: '250px',
-                            alignSelf: 'center',
-                            display: {xs: 'block', sm: 'block', md: 'none'},
-                        }}
-                    >
-                        <Image 
-                            src={'images/BlackLaptop.svg'}
-                            alt={"Laptop"} 
-                            height={250}
-                            width={250}
-                            style={{
-                                maxWidth: '100%',
-                            }}
-                        />
-                    </Box>
-                </Stack>
+                    <HomeSection 
+                        isDarkMode={isDarkMode}
+                    />
+                    <ProjectsSection />
+                    <ResumeSection />
+                    <Footer />
+                </Box>
+
             </Box>
-        </Grow>
+        </ThemeProvider>
     )
 }
 

@@ -1,55 +1,54 @@
-import { Typography, Box, Stack } from "@mui/material"
+import { Typography, Box, Stack, Button } from "@mui/material"
 import Image from "next/image";
-import { Teko } from "next/font/google"
+import { GitHub } from "@mui/icons-material";
 import Link from "next/link";
 
-const teko = Teko({
-    weight: '700',
-    subsets: ['latin'],
-})
 
-const ProjectWidget = ({ route, thumbnail, title, info, imgAlt }) => {
+const ProjectWidget = ({ thumbnail, title, info, imgAlt, github }) => {
     return (
-        <Link
-            href={`/projects/${route}`}
-            style={{textDecoration: 'none'}}
+        <Stack
+            id = "project-widget"
+            spacing={1}
+            alignItems='center'
+            sx={{
+                p: 1,
+                m: 0,
+                width: '100%',
+            }}
         >
-            <Stack
-                id = "project-widget"
-                spacing={1}
-                alignItems='center'
+            <Box
                 sx={{
-                    p: 1,
-                    m: 0,
-                    width: '100%',
+                    maxWidth: '360px',
+                    maxHeight: '204px',
                 }}
+            >
+                <Image 
+                    src={thumbnail}
+                    alt={imgAlt} 
+                    width={360}
+                    height={204}
+                    style={{
+                        maxWidth: '100%',
+                        borderRadius: '15px',
+                        borderStyle: 'solid',
+                        borderWidth: '2px',
+                        borderColor: '#252422',
+                    }}
+                />
+            </Box>
+            <Stack
+                spacing={1} 
+                sx={{
+                    py: 0.5,
+                    px: 2,
+                    maxWidth: '350px',
+                }} 
             >
                 <Box
                     sx={{
-                        maxWidth: '360px',
-                        maxHeight: '204px',
+                        display: 'flex',
+                        justifyContent: 'center',
                     }}
-                >
-                    <Image 
-                        src={thumbnail}
-                        alt={imgAlt} 
-                        width={360}
-                        height={204}
-                        style={{
-                            maxWidth: '100%',
-                            borderRadius: '15px',
-                            borderStyle: 'solid',
-                            borderWidth: '2px',
-                            borderColor: '#252422',
-                        }}
-                    />
-                </Box>
-                <Stack
-                    sx={{
-                        py: 0.5,
-                        px: 2,
-                        maxWidth: '350px',
-                    }} 
                 >
                     <Typography
                         variant='h6' 
@@ -57,23 +56,63 @@ const ProjectWidget = ({ route, thumbnail, title, info, imgAlt }) => {
                         sx={{
                             fontWeight: 'bold',
                             color: 'text.primary',
+                            borderBottom: '4px solid',
+                            borderColor: 'text.primary',
                         }}
                     >
                         {title}
                     </Typography>
-                    <Typography
-                        variant='body1'
-                        align='center'
+                </Box>
+                <Typography
+                    variant='body1'
+                    align='center'
+                    sx={{
+                        fontWeight: 'bold',
+                        color: 'text.primary',
+                    }}
+                >
+                    {info}
+                </Typography>
+            </Stack>
+            <Box
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'flex-end',
+                    height: '100%',
+                }}
+            >
+                <Link
+                    href={github}
+                    rel='noopener noreferrer'
+                    target='_blank'
+                    style={{textDecoration: 'none'}}
+                >
+                    <Button
+                        startIcon={<GitHub />}
+                        variant='text'
                         sx={{
-                            fontWeight: 'bold',
-                            color: 'text.primary',
+                            px: 2,
+                            py: 1,
+                            color: 'iconColor.icon',
+                            backgroundColor: 'iconColor.background',
+                            borderStyle: 'solid',
+                            borderWidth: '2px',
+                            borderColor: 'iconColor.icon',
                         }}
                     >
-                        {info}
-                    </Typography>
-                </Stack>
-            </Stack>
-        </Link>
+                        <Typography
+                            variant='body1'
+                            sx={{
+                                fontWeight: 'bold',
+                            }}
+                        >
+                            GitHub
+                        </Typography>
+                    </Button>
+                </Link>
+            </Box>
+        </Stack>
     )
 }
 

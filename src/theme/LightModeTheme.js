@@ -12,7 +12,7 @@ let lightTheme = createTheme({
             main: '#fffcf2'
         },
         secondary: {
-            main: '#fffcf2',
+            main: '#ccc5b9',
         },
         background: {
             paper: '#fffcf2',
@@ -30,6 +30,10 @@ let lightTheme = createTheme({
             icon: '#252422',
             background: '#252422',
             hover: '#ccc5b9',
+        },
+        resume: {
+            background: '#fffcf2',
+            border: '#252422',
         }
     },
     typography: {

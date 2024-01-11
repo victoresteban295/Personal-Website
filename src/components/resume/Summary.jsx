@@ -1,10 +1,4 @@
 import { Typography, Box } from "@mui/material"
-import { Teko } from "next/font/google"
-
-const teko = Teko({
-    weight: '700',
-    subsets: ['latin'],
-})
 
 const Summary = () => {
     return (
@@ -27,11 +21,11 @@ const Summary = () => {
                 <Typography
                     variant="h5"
                     sx={{
-                        fontFamily: teko.style.fontFamily,
                         m: 0,
                         mb: 1,
                         p: 0,
                         borderBottom: '4px solid',
+                        fontWeight: 'bold',
                     }}
                 >
                     Summary

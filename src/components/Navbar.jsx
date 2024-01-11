@@ -23,8 +23,8 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
     };
 
     return (
-        <Box sx={{position: 'sticky', top: '0px', zIndex: '999' }}>
-            <AppBar position='sticky' >
+        <Box sx={{position: 'fixed', top: '0px', zIndex: '999' }}>
+            <AppBar position='fixed' >
                 <Container maxWidth='xl'>
                     <Toolbar disableGutters>
                         
@@ -69,7 +69,7 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
                                     onClick={handleClose}
                                 >
                                  {/* Navigation Button: Home */}
-                                    <Link href='/' style={{textDecoration: 'none'}}>
+                                    <Link href='#home' style={{textDecoration: 'none'}}>
                                         <Button 
                                             variant='text' 
                                             startIcon={currentRoute === '/' ? <Home /> : <HomeOutlined />}
@@ -90,7 +90,7 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
                                     onClick={handleClose}
                                 >
                                     {/* Navigation Button: Projects */}
-                                    <Link href='/projects' style={{textDecoration: 'none'}}>
+                                    <Link href='#projects' style={{textDecoration: 'none'}}>
                                         <Button 
                                             variant='text' 
                                             startIcon={currentRoute === '/projects' ? <IntegrationInstructions /> : <IntegrationInstructionsOutlined />} 
@@ -111,7 +111,7 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
                                     onClick={handleClose}
                                 >
                                     {/* Navigation Button: Resume */}
-                                    <Link href='/resume' style={{textDecoration: 'none'}}>
+                                    <Link href='#resume' style={{textDecoration: 'none'}}>
                                         <Button 
                                             variant='text' 
                                             startIcon={currentRoute === '/resume' ? <Article /> : <ArticleOutlined />} 
@@ -139,7 +139,7 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
                             }}
                         >
                             {/* Navigation Button: Home */}
-                            <Link href='/' style={{textDecoration: 'none'}}>
+                            <Link href='#home' style={{textDecoration: 'none'}}>
                                 <Button 
                                     variant='text' 
                                     startIcon={currentRoute === '/' ? <Home /> : <HomeOutlined />}
@@ -156,7 +156,7 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
                             </Link>
 
                             {/* Navigation Button: Projects */}
-                            <Link href='/projects' style={{textDecoration: 'none'}}>
+                            <Link href='#projects' style={{textDecoration: 'none'}}>
                                 <Button 
                                     variant='text' 
                                     startIcon={currentRoute === '/projects' ? <IntegrationInstructions /> : <IntegrationInstructionsOutlined />} 
@@ -173,7 +173,7 @@ const NavBar = ({ isDarkMode, toggleDarkMode }) => {
                             </Link>
 
                             {/* Navigation Button: Resume */}
-                            <Link href='/resume' style={{textDecoration: 'none'}}>
+                            <Link href='#resume' style={{textDecoration: 'none'}}>
                                 <Button 
                                     variant='text' 
                                     startIcon={currentRoute === '/resume' ? <Article /> : <ArticleOutlined />} 

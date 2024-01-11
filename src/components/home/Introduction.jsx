@@ -1,52 +1,23 @@
-import { Typography, Box } from "@mui/material"
-import { Teko } from "next/font/google"
-
-const teko = Teko({
-    weight: '700',
-    subsets: ['latin'],
-})
+import { Stack } from "@mui/material"
+import Name from "./Name";
+import Social from "./Social";
+import Aboutme from "./Aboutme";
 
 const Introduction = () => {
     return (
-        <Box
-            id = "name-section"
+        <Stack
+            spacing={2}
             sx={{
-                display: 'flex',
-                flexDirection: {xs: 'column', sm: 'row'},
-                alignItems: 'center',
-                width: '100%',
-                py: 1,
-                px: 3,
+                textAlign: {xs: 'center', sm: 'left'},
                 color: 'text.primary',
-                borderRadius: '15px',
-                backgroundColor: 'secondary.main',
-                boxShadow: '1px 1px 10px #000',
+                maxWidth: '700px',
             }}
         >
-            <Box
-                sx={{
-                    textAlign: {xs: 'center', sm: 'left'},
-                }}
-            >
-                <Typography 
-                    variant='h3' 
-                    sx={{
-                    }}
-                >
-                    Victor Manuel Esteban
-                </Typography>
-                <Typography
-                    variant='h6'
-                    sx={{
-                        fontWeight: 'bold',
-                        color: '#eb5e28',
-                    }}
-                >
-                    Full Stack Developer 
-                </Typography>
-            </Box>
-        </Box>
+            <Name />
+            <Aboutme />
+            <Social />
+        </Stack>
     )
 }
 
-export default Introduction
+export default Introduction;

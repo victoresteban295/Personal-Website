@@ -1,10 +1,4 @@
 import { Typography, Box, List, ListItem } from "@mui/material"
-import { Teko } from "next/font/google"
-
-const teko = Teko({
-    weight: '700',
-    subsets: ['latin'],
-})
 
 const Skill = () => {
     return (
@@ -27,7 +21,7 @@ const Skill = () => {
                 <Typography
                     variant="h5"
                     sx={{
-                        fontFamily: teko.style.fontFamily,
+                        fontWeight: 'bold',
                         borderBottom: '4px solid',
                         my: 1,
                     }}

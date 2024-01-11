@@ -11,7 +11,7 @@ let darkTheme = createTheme({
             main: '#393d3f'
         },
         secondary: {
-            main: '#403d39',
+            main: '#272c2e',
         },
         background: {
             paper: '#252422',
@@ -29,6 +29,10 @@ let darkTheme = createTheme({
             icon: '#fffcf2',
             background: '#fffcf2',
             hover: '#403d39'
+        }, 
+        resume: {
+            background: '#272c2e',
+            border: '#393d3f',
         }
     },
     typography: {

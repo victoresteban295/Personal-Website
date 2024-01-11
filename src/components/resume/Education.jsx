@@ -1,20 +1,11 @@
 import { AccountBalance, School } from "@mui/icons-material"
 import { Typography, Box, Avatar } from "@mui/material"
-import { Teko } from "next/font/google"
-
-const teko = Teko({
-    weight: '700',
-    subsets: ['latin'],
-})
 
 const Education = () => {
     return (
         <Box
             id="education-section"
             sx={{
-                /* borderRadius: '15px', */
-                /* backgroundColor: 'secondary.main', */
-                /* boxShadow: '1px 1px 10px #000', */
                 display: 'flex',
                 flexDirection: 'column',
                 textAlign: 'left',
@@ -34,8 +25,8 @@ const Education = () => {
                         m: 0,
                         mb: 1,
                         p: 0,
-                        fontFamily: teko.style.fontFamily,
                         borderBottom: '4px solid',
+                        fontWeight: 'bold',
                     }}
                 >
                     Education
@@ -58,6 +49,10 @@ const Education = () => {
                         sx={{
                             color: 'iconColor.icon',
                             backgroundColor: 'iconColor.background',
+                            borderRadius: '50px',
+                            borderStyle: 'solid',
+                            borderWidth: '2px',
+                            borderColor: 'iconColor.icon',
                             mr: 2,
                         }}
                     >
@@ -133,6 +128,10 @@ const Education = () => {
                         sx={{
                             color: 'iconColor.icon',
                             backgroundColor: 'iconColor.background',
+                            borderRadius: '50px',
+                            borderStyle: 'solid',
+                            borderWidth: '2px',
+                            borderColor: 'iconColor.icon',
                             mr: 2,
                         }}
                     >
