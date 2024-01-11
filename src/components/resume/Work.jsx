@@ -72,7 +72,7 @@ const Work = () => {
                         <Typography
                             variant='body1'
                         >
-                            Prep customers' online orders by locating the items in the store.
+                            {"Prep customers' online orders by locating the items in the store."}
                         </Typography>
                     </ListItem>                 
                     <ListItem
@@ -84,7 +84,7 @@ const Work = () => {
                         <Typography
                             variant='body1'
                         >
-                            Package and organize customers' orders to guarantee efficient distribution during pick up.
+                            {"Package and organize customers' orders to guarantee efficient distribution during pick up."}
                         </Typography>
                     </ListItem>                 
                     <ListItem

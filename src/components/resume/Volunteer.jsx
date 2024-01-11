@@ -72,8 +72,7 @@ const Volunteer = () => {
                         <Typography
                             variant='body1'
                         >
-                            Chaperone prospective students, making sure they're on schedule 
-                            for their events.
+                            {"Chaperone prospective students, making sure they're on schedule for their events."}
                         </Typography>
                     </ListItem>                 
                     <ListItem
@@ -85,8 +84,7 @@ const Volunteer = () => {
                         <Typography
                             variant='body1'
                         >
-                            Responsible for providing them a glimpse into everyday life as
-                            an Albion College Student.
+                            {"Responsible for providing them a glimpse into everyday life as an Albion College Student."}
                         </Typography>
                     </ListItem>                 
                     <ListItem
@@ -147,7 +145,7 @@ const Volunteer = () => {
                         <Typography
                             variant='body1'
                         >
-                            Monitored student projects to ensure the lab's equipment was respected.
+                            {"Monitored student projects to ensure the lab's equipment was respected."}
                         </Typography>
                     </ListItem>                 
                     <ListItem
@@ -159,7 +157,7 @@ const Volunteer = () => {
                         <Typography
                             variant='body1'
                         >
-                            Worked closely with the club’s president and treasury to process and approve student's requests for item purchases.
+                            {"Worked closely with the club’s president and treasury to process and approve student's requests for item purchases."}
                         </Typography>
                     </ListItem>                 
                 </List>
