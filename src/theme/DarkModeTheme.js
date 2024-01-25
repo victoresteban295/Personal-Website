@@ -14,8 +14,8 @@ let darkTheme = createTheme({
             main: '#272c2e',
         },
         background: {
-            paper: '#252422',
-            default: '#252422'
+            paper: '#393d3f',
+            default: '#393d3f'
         },
         text: {
             primary: '#fffcf2'
