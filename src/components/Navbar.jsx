@@ -201,7 +201,7 @@ const NavBar = ({ isDarkMode, toggleDarkMode, isHomeVisible, isProjectsVisible, 
                                 color: 'darkMode.icon',
                                 cursor: 'pointer',
                                 "&:hover": {
-                                    bgcolor: 'darkMode.hover'
+                                    backgroundColor: 'primary.main'
                                 }
                             }}
                             size="small"
