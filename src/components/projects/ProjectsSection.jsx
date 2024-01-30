@@ -35,7 +35,7 @@ const ProjectsSection = ({ projectsRef }) => {
                     }}
                 >
                     {projects.map(project => {
-                        const {route, thumbnail, thumbnailAlt, title, info, github } = project;
+                        const {route, thumbnail, thumbnailAlt, title, info, github, website } = project;
                         return (
                             <ProjectWidget 
                                 key={route}
@@ -43,6 +43,7 @@ const ProjectsSection = ({ projectsRef }) => {
                                 imgAlt={thumbnailAlt}
                                 title={title}
                                 info={info}
+                                website={website}
                                 github={github}
                             />
                         )

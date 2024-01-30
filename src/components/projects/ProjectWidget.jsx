@@ -1,10 +1,11 @@
 import { Typography, Box, Stack, Button } from "@mui/material"
 import Image from "next/image";
-import { GitHub } from "@mui/icons-material";
+import { Devices, GitHub } from "@mui/icons-material";
 import Link from "next/link";
 
 
-const ProjectWidget = ({ thumbnail, title, info, imgAlt, github }) => {
+const ProjectWidget = ({ thumbnail, title, info, imgAlt, github, website }) => {
+    const hasWebsite = (website != '');
     return (
         <Stack
             id = "project-widget"
@@ -74,14 +75,46 @@ const ProjectWidget = ({ thumbnail, title, info, imgAlt, github }) => {
                     {info}
                 </Typography>
             </Stack>
-            <Box
+            <Stack
+                direction='row'
+                justifyContent='center'
+                alignItems='flex-end'
+                spacing={2}
                 sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'flex-end',
                     height: '100%',
                 }}
             >
+                {hasWebsite && (
+                    <Link
+                        href={website}
+                        rel='noopener noreferrer'
+                        target='_blank'
+                        style={{textDecoration: 'none'}}
+                    >
+                        <Button
+                            startIcon={<Devices />}
+                            variant='text'
+                            sx={{
+                                px: 2,
+                                py: 1,
+                                color: 'iconColor.icon',
+                                backgroundColor: 'iconColor.background',
+                                borderStyle: 'solid',
+                                borderWidth: '2px',
+                                borderColor: 'iconColor.icon',
+                            }}
+                        >
+                            <Typography
+                                variant='body1'
+                                sx={{
+                                    fontWeight: 'bold',
+                                }}
+                            >
+                                Website
+                            </Typography>
+                        </Button>
+                    </Link>
+                )}
                 <Link
                     href={github}
                     rel='noopener noreferrer'
@@ -111,7 +144,7 @@ const ProjectWidget = ({ thumbnail, title, info, imgAlt, github }) => {
                         </Typography>
                     </Button>
                 </Link>
-            </Box>
+            </Stack>
         </Stack>
     )
 }

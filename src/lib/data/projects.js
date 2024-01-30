@@ -5,7 +5,7 @@ const academicDashboard = {
     title: 'Academic Dashboard',
     info: 'A web application for academic institutions that improves how students interact with course-related work assigned by professors.',
     description: 'For educational institutions looking to boost academic performance, Academic Dashboard is a web application that improves how students interact with course-related work assigned by professors. Unlike similar products that are uniquely designed for a single institution, our software product was built to be adopted across different campuses and provide all students with a sense of familiarity. Its built-in calendar, checklist, and reminders allow users to become more organized without switching applications.',
-    website: 'https://github.com/victoresteban295/Academic_Dashboard_Frontend',
+    website: 'https://academic-dashboard-demo.vercel.app/',
     github: 'https://github.com/victoresteban295/Academic_Dashboard_Frontend',
     stack: [
         {
