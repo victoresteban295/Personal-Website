@@ -12,7 +12,7 @@
 
 ```
 src
-├── app
+├── pages
 ├── components
 ├── lib
 │   ├── data
@@ -20,7 +20,7 @@ src
 └── theme
 ```
 
-- `app` directory - Nextjs Routes
+- `pages` directory - Nextjs Routes
 - `components` directory - React Components
 - `lib/data` directory - Portfolio Projects Stored in JSON Format
 - `lib/utils` directory - Methods to Verify a Project
