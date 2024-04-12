@@ -1,9 +1,8 @@
 import { Stack, Typography } from "@mui/material";
 import Summary from "./Summary";
-import Work from "./Work";
-import Volunteer from "./Volunteer";
 import Skill from "./Skill";
-import Education from "./Education";
+import Work from "./Work/Work";
+import Education from "./Education/Education";
 
 const ResumeSection = ({ resumeRef }) => {
     return (
@@ -38,7 +37,6 @@ const ResumeSection = ({ resumeRef }) => {
                 <Summary /> 
                 <Work />
                 <Education />
-                <Volunteer />
                 <Skill />
             </Stack>
         </Stack>
