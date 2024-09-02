@@ -35,8 +35,8 @@ const ResumeSection = ({ resumeRef }) => {
                 }}
             >
                 <Summary /> 
-                <Work />
                 <Education />
+                <Work />
                 <Skill />
             </Stack>
         </Stack>

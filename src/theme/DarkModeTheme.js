@@ -18,16 +18,16 @@ let darkTheme = createTheme({
             default: '#393d3f'
         },
         text: {
-            primary: '#fffcf2'
+            primary: '#e5e5e5'
         },
         iconColor: {
-            icon: '#fffcf2',
+            icon: '#e5e5e5',
             background: '#393d3f',
             hover: '#403d39'
         },
         darkMode: {
-            icon: '#fffcf2',
-            background: '#fffcf2',
+            icon: '#e5e5e5',
+            background: '#e5e5e5',
             hover: '#403d39'
         }, 
         resume: {

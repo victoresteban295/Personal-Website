@@ -9,30 +9,30 @@ const cabin = Cabin({
 let lightTheme = createTheme({
     palette: {
         primary: {
-            main: '#fffcf2'
+            main: '#fff'
         },
         secondary: {
-            main: '#ccc5b9',
+            main: '#e5e5e5',
         },
         background: {
-            paper: '#fffcf2',
-            default: '#fffcf2'
+            paper: '#fff',
+            default: '#fff'
         },
         text: {
             primary: '#252422'
         },
         iconColor: {
             icon: '#252422',
-            background: '#fffcf2',
-            hover: '#ccc5b9'
+            background: '#fff',
+            hover: '#e5e5e5'
         },
         darkMode: {
             icon: '#252422',
             background: '#252422',
-            hover: '#ccc5b9',
+            hover: '#e5e5e5',
         },
         resume: {
-            background: '#fffcf2',
+            background: '#fff',
             border: '#252422',
         }
     },

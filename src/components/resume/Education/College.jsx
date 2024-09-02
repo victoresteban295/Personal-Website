@@ -1,4 +1,4 @@
-import { AccountBalance, School } from "@mui/icons-material";
+import { AccountBalance, AssuredWorkload, School } from "@mui/icons-material";
 import { Avatar, Box, Typography } from "@mui/material";
 
 const College = ({ index, college, city, degree, minor, graduation }) => {
@@ -28,7 +28,9 @@ const College = ({ index, college, city, degree, minor, graduation }) => {
                         mr: 2,
                     }}
                 >
-                    {index === "0" ? <AccountBalance /> : <School />}
+                    {index === "0" && <School />}
+                    {index === "1" && <AccountBalance />}
+                    {index === "2" && <AssuredWorkload />}
                 </Avatar>
                 <Box
                     id="schoolinfo-subsection" 

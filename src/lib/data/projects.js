@@ -85,5 +85,18 @@ const restApi = {
     gallery: []
 }
 
-const projects = [academicDashboard, restApi];
+const nvimConfig = {
+    route: 'nvimconfig',
+    thumbnail: '/images/nvimscreenshot.png',
+    thumbnailAlt: 'Neovim Configuration',
+    title: 'Neovim Configuration',
+    info: 'A set of config files to configure Neovim, a highly customizable text editor that runs in the terminal',
+    description: 'A set of config files to configure Neovim, a highly customizable text editor that runs in the terminal',
+    website: '',
+    github: 'https://github.com/victoresteban295/Nvim_Configuration',
+    stack: [],
+    gallery: []
+}
+
+const projects = [academicDashboard, restApi, nvimConfig];
 export default projects;

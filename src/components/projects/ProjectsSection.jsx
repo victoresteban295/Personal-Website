@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 import ProjectWidget from "./ProjectWidget";
 import projects from "@/src/lib/data/projects";
 
@@ -26,16 +26,24 @@ const ProjectsSection = ({ projectsRef }) => {
                 >
                     Projects
                 </Typography>
-                <Stack
+                <Grid
+                    container
                     ref={projectsRef}
-                    direction={{ xs: 'column', md: 'row' }}
-                    spacing={{xs: 5, sm: 10, md: 30}} 
+                    columnGap={5}
+                    rowGap={{
+                        xs: 2,
+                        sm: 5,
+                        md: 10,
+                        lg: 10,
+                    }}
                     sx={{
-                        width: '100%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        maxWidth: '1250px',
                     }}
                 >
                     {projects.map(project => {
-                        const {route, thumbnail, thumbnailAlt, title, info, github, website } = project;
+                        const { route, thumbnail, thumbnailAlt, title, info, github, website } = project;
                         return (
                             <ProjectWidget 
                                 key={route}
@@ -48,7 +56,7 @@ const ProjectsSection = ({ projectsRef }) => {
                             />
                         )
                     })}
-                </Stack>
+                </Grid>
             </Stack>
         </Box>
     )
